@@ -5,9 +5,9 @@
             @if(Auth::check() && Auth::user()->hasRole('Author'))
             <li><a href="{{ route('author') }}">Author</a></li>
             @endif
-            @if(Auth::check() && Auth::user()->hasRole('Admin'))
+          
             <li><a href="{{ route('admin') }}">Admin</a></li>
-            @endif
+
             <span id="separator"></span>
             @if(Auth::guest())
                 <li><a href="{{ route('signup') }}">Sign Up</a></li>

@@ -29,15 +29,11 @@ Route:: get('/author/generate-article',[
 ]);
 Route::get('/admin',[
 	'uses' => 'AppController@getAdminPage',
-	'as' => 'admin',
-	'middleware' => 'roles',
-	'roles' => ['Admin']
+	'as' => 'admin'
 ]);
 Route::post('/admin/assign-roles',[
 	'uses' => 'AppController@postAdminAssignRoles',
-	'as' => 'admin.assign',
-	'middleware' => 'roles',
-	'roles' => ['Admin']
+	'as' => 'admin.assign'
 ]);
 Route::get('/signup',[
 	'uses' => 'AuthController@getSignUpPage',
