@@ -3,13 +3,17 @@
 namespace App\Http\Controllers;
 use App\User;
 use App\Role;
+use App\Category;
+use App\SubCategory;
 use Illuminate\Http\Request;
 
 class AppController extends Controller
 {
     public function getIndex()
     {
-        return view('index');
+        $categories = Category::all();
+        //$subcategories = SubCategory::all();
+        return view('index',['categories' => $categories]);
     }
     
     public function getAuthorPage()

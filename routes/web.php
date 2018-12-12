@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/',function(){
-	return view('index');
-})->name('main');
-
+Route::get('/',[
+	'uses' => 'AppController@getIndex',
+	'as' => 'main'
+]);
 Route::get('/author',[
 	'uses' => 'AppController@getAuthorPage',
 	'as' => 'author',
