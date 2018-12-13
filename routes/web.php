@@ -43,11 +43,11 @@ Route::post('/signup',[
 	'uses' => 'AuthController@postSignup',
 	'as' => 'signup'
 ]);
-Route::get('signin',[
+Route::get('/signin',[
 	'uses' => 'AuthController@getSignInPage',
 	'as' => 'signin'
 ]);
-Route::post('signin',[
+Route::post('/signin',[
 	'uses' => 'AuthController@postSignIn',
 	'as' => 'signin'
 ]);

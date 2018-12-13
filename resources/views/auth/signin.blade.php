@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+    <div class="header-empty-space"></div>
     <form action="{{ route('signin') }}" method="post">
         <div class="input-group">
             <label for="email">E-Mail</label>
