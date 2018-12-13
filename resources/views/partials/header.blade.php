@@ -19,15 +19,15 @@
                     </div>
                     <div class="entry hidden-xs hidden-sm"><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
                     <div class="entry hidden-xs hidden-sm cart">
-                        <a href="cart.html">
+                        <a href="{{route('product.shoppingCart')}}">
                             <b class="hidden-xs">Your bag</b>
                             <span class="cart-icon">
                                 <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                <span class="cart-label">5</span>
+                                <span class="cart-label">{{ Session::has('cart') ? Session::get('cart')->totalQty : 0 }}</span>
                             </span>
-                            <span class="cart-title hidden-xs">$1195.00</span>
+                            <span class="cart-title hidden-xs">${{ Session::has('cart') ? Session::get('cart')->totalPrice : 0 }}</span>
                         </a>
-                        <div class="cart-toggle hidden-xs hidden-sm">
+                        <!-- <div class="cart-toggle hidden-xs hidden-sm">
                             <div class="cart-overflow">
                                 <div class="cart-entry clearfix">
                                     <a class="cart-entry-thumbnail" href="#"><img src="img/product-1.png" alt="" /></a>
@@ -115,7 +115,7 @@
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="hamburger-icon">
                         <span></span>
@@ -427,10 +427,10 @@
                     </div>
                     <div class="header-bottom-icon toggle-search"><i class="fa fa-search" aria-hidden="true"></i></div>
                     <div class="header-bottom-icon visible-rd"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
-                    <div class="header-bottom-icon visible-rd">
+                    <!-- <div class="header-bottom-icon visible-rd">
                         <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                         <span class="cart-label">5</span>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="header-search-wrapper">

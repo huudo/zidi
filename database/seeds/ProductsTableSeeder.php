@@ -19,6 +19,7 @@ class ProductsTableSeeder extends Seeder
         $category_linhchi = SubCategory::where('name','linhchi')->first();
 
         $product = new Product();
+        $product->picture = "https://beautygarden.vn/Upload/Files/a0-12122018021031.jpg";
         $product->title = "Kem Dưỡng da ban đêm";
         $product->description = "Kem dưỡng gia tinh dầu nghệ";
         $product->price = 120000;
@@ -26,6 +27,7 @@ class ProductsTableSeeder extends Seeder
         $product->save();
         
         $product = new Product();
+        $product->picture = "https://beautygarden.vn/Upload/Files/a0-12122018021031.jpg";
         $product->title = "Áo Nike";
         $product->description = "Áo Nike nhập khẩu nguyên chiếc";
         $product->price = 500000;
@@ -33,6 +35,7 @@ class ProductsTableSeeder extends Seeder
         $product->save();
 
         $product = new Product();
+        $product->picture = "https://beautygarden.vn/Upload/Files/a0-12122018021031.jpg";
         $product->title = "Nhân sâm 6 tuổi";
         $product->description = "Nhân sâm 6 tuổi 1 hộp 5 kg";
         $product->price = 15000000;
@@ -40,6 +43,7 @@ class ProductsTableSeeder extends Seeder
         $product->save();
 
         $product = new Product();
+        $product->picture = "https://beautygarden.vn/Upload/Files/a0-12122018021031.jpg";
         $product->title = "Linh chi 1 năm";
         $product->description = "Linh chi";
         $product->price = 15000000;

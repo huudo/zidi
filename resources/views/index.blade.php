@@ -27,7 +27,7 @@
                                     </div>
                                     <div data-swiper-parallax-x="-300">
                                         <div class="buttons-wrapper">
-                                            <a class="button size-2 style-2" href="#">
+                                            <a class="button size-2 style-2" href="">
                                                 <span class="button-wrapper">
                                                     <span class="icon"><img src="img/icon-1.png" alt=""></span>
                                                     <span class="text">Learn More</span>
@@ -65,64 +65,7 @@
                         <div class="empty-space col-xs-b80 col-sm-b0"></div>
                     </div>
                </div>
-<!--                <div class="swiper-slide">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-6 col-sm-offset-6">
-                                <div class="cell-view page-height">
-                                    <div class="col-xs-b40 col-sm-b80"></div>
-                                    <div data-swiper-parallax-x="-600">
-                                        <div class="simple-article grey size-5">BEST PRICE <span class="color">$199.00</span></div>
-                                        <div class="col-xs-b5"></div>
-                                    </div>
-                                    <div data-swiper-parallax-x="-500">
-                                        <h1 class="h1">smartphone x transform</h1>
-                                        <div class="title-underline left"><span></span></div>
-                                    </div>
-                                    <div data-swiper-parallax-x="-400">
-                                        <div class="simple-article size-4 grey">In feugiat molestie tortor a malesuada. Etiam a venenatis ipsum. Proin pharetra elit at feugiat commodo vel placerat tincidunt sapien nec</div>
-                                        <div class="col-xs-b30"></div>
-                                    </div>
-                                    <div data-swiper-parallax-x="-300">
-                                        <div class="buttons-wrapper">
-                                            <a class="button size-2 style-2" href="#">
-                                                <span class="button-wrapper">
-                                                    <span class="icon"><img src="img/icon-1.png" alt=""></span>
-                                                    <span class="text">Learn More</span>
-                                                </span>
-                                            </a>
-                                            <a class="button size-2 style-3" href="#">
-                                                <span class="button-wrapper">
-                                                    <span class="icon"><img src="img/icon-3.png" alt=""></span>
-                                                    <span class="text">Add To Cart</span>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-b40 col-sm-b80"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider-product-preview align-left">
-                            <div class="product-preview-shortcode">
-                                <div class="preview">
-                                    <div class="swiper-lazy-preloader"></div>
-                                    <div class="entry full-size swiper-lazy active" data-background="img/product-preview-1.jpg"></div>
-                                    <div class="entry full-size swiper-lazy" data-background="img/product-preview-2.jpg"></div>
-                                    <div class="entry full-size swiper-lazy" data-background="img/product-preview-3.jpg"></div>
-                                </div>
-                                <div class="sidebar valign-middle" data-swiper-parallax-x="-300">
-                                    <div class="valign-middle-content">
-                                        <div class="entry active"><img src="img/product-4.png" alt="" /></div>
-                                        <div class="entry"><img src="img/product-5.png" alt="" /></div>
-                                        <div class="entry"><img src="img/product-6.png" alt="" /></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="empty-space col-xs-b80 col-sm-b0"></div>
-                    </div>
-               </div> -->
+
            </div>
            <div class="swiper-pagination"></div>
         </div>
@@ -146,14 +89,15 @@
                         <div class="empty-space col-xs-b30"></div>
                         <div class="tab-entry visible">
                             <div class="row nopadding">
+                                @foreach ($products as $product)
                                 <div class="col-sm-4">
                                     <div class="product-shortcode style-1">
                                         <div class="title">
-                                            <div class="simple-article size-1 color col-xs-b5"><a href="#">SMART PHONES</a></div>
-                                            <div class="h6 animate-to-green"><a href="#">Smartphone vibe x2</a></div>
+                                            <!-- <div class="simple-article size-1 color col-xs-b5"><a href="#">{{$product->title}}</a></div> -->
+                                            <div class="h6 animate-to-green"><a href="#">{{$product->title}}2</a></div>
                                         </div>
                                         <div class="preview">
-                                            <img src="img/product-7.jpg" alt="" />
+                                            <img src="{{$product->picture}}" alt="{{$product->title}}" />
                                             <div class="preview-buttons valign-middle">
                                                 <div class="valign-middle-content">
                                                     <a class="button size-2 style-2" href="#">
@@ -162,7 +106,7 @@
                                                             <span class="text">Learn More</span>
                                                         </span>
                                                     </a>
-                                                    <a class="button size-2 style-3" href="#">
+                                                    <a class="button size-2 style-3" href="{{ route('product.addToCart',['id' => $product->id])}}">
                                                         <span class="button-wrapper">
                                                             <span class="icon"><img src="img/icon-3.png" alt=""></span>
                                                             <span class="text">Add To Cart</span>
@@ -172,10 +116,10 @@
                                             </div>
                                         </div>
                                         <div class="price">
-                                            <div class="simple-article size-4 dark">$630.00</div>
+                                            <div class="simple-article size-4 dark">$ {{$product->price}}</div>
                                         </div>
                                         <div class="description">
-                                            <div class="simple-article text size-2">Mollis nec consequat at In feugiat mole stie tortor a malesuada</div>
+                                            <div class="simple-article text size-2">{{$product->description}}</div>
                                             <div class="icons">
                                                 <a class="entry"><i class="fa fa-check" aria-hidden="true"></i></a>
                                                 <a class="entry open-popup" data-rel="3"><i class="fa fa-eye" aria-hidden="true"></i></a>
@@ -184,196 +128,7 @@
                                         </div>
                                     </div>  
                                 </div>
-                                <div class="col-sm-4">
-                                    <div class="product-shortcode style-1">
-                                        <div class="title">
-                                            <div class="simple-article size-1 color col-xs-b5"><a href="#">SMART PHONES</a></div>
-                                            <div class="h6 animate-to-green"><a href="#">Smartphone vibe x2</a></div>
-                                        </div>
-                                        <div class="preview">
-                                            <img src="img/product-8.jpg" alt="" />
-                                            <div class="preview-buttons valign-middle">
-                                                <div class="valign-middle-content">
-                                                    <a class="button size-2 style-2" href="#">
-                                                        <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-1.png" alt=""></span>
-                                                            <span class="text">Learn More</span>
-                                                        </span>
-                                                    </a>
-                                                    <a class="button size-2 style-3" href="#">
-                                                        <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-3.png" alt=""></span>
-                                                            <span class="text">Add To Cart</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="price">
-                                            <div class="simple-article size-4 dark">$630.00</div>
-                                        </div>
-                                        <div class="description">
-                                            <div class="simple-article text size-2">Mollis nec consequat at In feugiat mole stie tortor a malesuada</div>
-                                            <div class="icons">
-                                                <a class="entry"><i class="fa fa-check" aria-hidden="true"></i></a>
-                                                <a class="entry open-popup" data-rel="3"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                                <a class="entry"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="product-shortcode style-1">
-                                        <div class="title">
-                                            <div class="simple-article size-1 color col-xs-b5"><a href="#">SMART PHONES</a></div>
-                                            <div class="h6 animate-to-green"><a href="#">Smartphone vibe x2</a></div>
-                                        </div>
-                                        <div class="preview">
-                                            <img src="img/product-9.jpg" alt="" />
-                                            <div class="preview-buttons valign-middle">
-                                                <div class="valign-middle-content">
-                                                    <a class="button size-2 style-2" href="#">
-                                                        <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-1.png" alt=""></span>
-                                                            <span class="text">Learn More</span>
-                                                        </span>
-                                                    </a>
-                                                    <a class="button size-2 style-3" href="#">
-                                                        <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-3.png" alt=""></span>
-                                                            <span class="text">Add To Cart</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="price">
-                                            <div class="simple-article size-4"><span class="color">$630.00</span>&nbsp;&nbsp;&nbsp;<span class="line-through">$350.00</span></div>
-                                        </div>
-                                        <div class="description">
-                                            <div class="simple-article text size-2">Mollis nec consequat at In feugiat mole stie tortor a malesuada</div>
-                                            <div class="icons">
-                                                <a class="entry"><i class="fa fa-check" aria-hidden="true"></i></a>
-                                                <a class="entry open-popup" data-rel="3"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                                <a class="entry"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="product-shortcode style-1">
-                                        <div class="title">
-                                            <div class="simple-article size-1 color col-xs-b5"><a href="#">SMART PHONES</a></div>
-                                            <div class="h6 animate-to-green"><a href="#">Smartphone vibe x2</a></div>
-                                        </div>
-                                        <div class="preview">
-                                            <img src="img/product-10.jpg" alt="" />
-                                            <div class="preview-buttons valign-middle">
-                                                <div class="valign-middle-content">
-                                                    <a class="button size-2 style-2" href="#">
-                                                        <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-1.png" alt=""></span>
-                                                            <span class="text">Learn More</span>
-                                                        </span>
-                                                    </a>
-                                                    <a class="button size-2 style-3" href="#">
-                                                        <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-3.png" alt=""></span>
-                                                            <span class="text">Add To Cart</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="price">
-                                            <div class="simple-article size-4 dark">$630.00</div>
-                                        </div>
-                                        <div class="description">
-                                            <div class="simple-article text size-2">Mollis nec consequat at In feugiat mole stie tortor a malesuada</div>
-                                            <div class="icons">
-                                                <a class="entry"><i class="fa fa-check" aria-hidden="true"></i></a>
-                                                <a class="entry open-popup" data-rel="3"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                                <a class="entry"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>  
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="product-shortcode style-1">
-                                        <div class="title">
-                                            <div class="simple-article size-1 color col-xs-b5"><a href="#">SMART PHONES</a></div>
-                                            <div class="h6 animate-to-green"><a href="#">Smartphone vibe x2</a></div>
-                                        </div>
-                                        <div class="preview">
-                                            <img src="img/product-11.jpg" alt="" />
-                                            <div class="preview-buttons valign-middle">
-                                                <div class="valign-middle-content">
-                                                    <a class="button size-2 style-2" href="#">
-                                                        <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-1.png" alt=""></span>
-                                                            <span class="text">Learn More</span>
-                                                        </span>
-                                                    </a>
-                                                    <a class="button size-2 style-3" href="#">
-                                                        <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-3.png" alt=""></span>
-                                                            <span class="text">Add To Cart</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="price">
-                                            <div class="simple-article size-4 dark">$630.00</div>
-                                        </div>
-                                        <div class="description">
-                                            <div class="simple-article text size-2">Mollis nec consequat at In feugiat mole stie tortor a malesuada</div>
-                                            <div class="icons">
-                                                <a class="entry"><i class="fa fa-check" aria-hidden="true"></i></a>
-                                                <a class="entry open-popup" data-rel="3"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                                <a class="entry"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="product-shortcode style-1">
-                                        <div class="title">
-                                            <div class="simple-article size-1 color col-xs-b5"><a href="#">SMART PHONES</a></div>
-                                            <div class="h6 animate-to-green"><a href="#">Smartphone vibe x2</a></div>
-                                        </div>
-                                        <div class="preview">
-                                            <img src="img/product-12.jpg" alt="" />
-                                            <div class="preview-buttons valign-middle">
-                                                <div class="valign-middle-content">
-                                                    <a class="button size-2 style-2" href="#">
-                                                        <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-1.png" alt=""></span>
-                                                            <span class="text">Learn More</span>
-                                                        </span>
-                                                    </a>
-                                                    <a class="button size-2 style-3" href="#">
-                                                        <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-3.png" alt=""></span>
-                                                            <span class="text">Add To Cart</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="price">
-                                            <div class="simple-article size-4 dark">$630.00</div>
-                                        </div>
-                                        <div class="description">
-                                            <div class="simple-article text size-2">Mollis nec consequat at In feugiat mole stie tortor a malesuada</div>
-                                            <div class="icons">
-                                                <a class="entry"><i class="fa fa-check" aria-hidden="true"></i></a>
-                                                <a class="entry open-popup" data-rel="3"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                                <a class="entry"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                         <div class="tab-entry">

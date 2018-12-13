@@ -5,17 +5,11 @@ use App\User;
 use App\Role;
 use App\Category;
 use App\SubCategory;
+use App\Product;
 use Illuminate\Http\Request;
 
 class AppController extends Controller
-{
-    public function getIndex()
-    {
-        $categories = Category::all();
-        //$subcategories = SubCategory::all();
-        return view('index',['categories' => $categories]);
-    }
-    
+{   
     public function getAuthorPage()
     {
         return view('author');
