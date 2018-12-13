@@ -1,7 +1,26 @@
 @extends('layouts.master')
 
 @section('content')
+
     <div class="header-empty-space"></div>
+    @foreach($orders as $order)
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <ul class="list-group">
+                    @foreach($order->cart->items as $item)
+                        <li class="list-group-item">
+                            <span class="badge">{{$item['price']}}$</span>
+                            {{$item['item']['title']}} | {{$item['item']['price']}}
+                            <strong>{{$item['qty']}}</strong>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+            <div class="panel-footer">
+                <strong>Totel: {{$order->cart->totalPrice}}</strong>
+            </div>
+        </div>
+    @endforeach
     <div class="slider-wrapper">
         <div class="swiper-button-prev visible-lg"></div>
         <div class="swiper-button-next visible-lg"></div>

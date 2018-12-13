@@ -71,3 +71,7 @@ Route::get('/plus-to-cart/{id}',[
 	'uses' => 'ProductController@getPlusToCart',
 	'as' => 'product.plusToCart'
 ]);
+Route::get('/checkout',[
+	'uses' => 'ProductController@getCheckout',
+	'as' =>'product.checkout'
+]);

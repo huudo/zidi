@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Product;
 use App\Cart;
+use App\Order;
+use Auth;
 use App\Http\Requests;
 use Session;
 class ProductController extends Controller
@@ -16,7 +18,12 @@ class ProductController extends Controller
         $categories = Category::all();
         //$subcategories = SubCategory::all();
         $products = Product::all();
-        return view('index',['categories' => $categories,'products' => $products]);
+        $orders = Auth::user()->orders;
+        $orders->transform(function($order,$key){
+            $order->cart = unserialize($order->cart);
+            return $order;
+        });
+        return view('index',['categories' => $categories,'products' => $products,'orders'=>$orders]);
     }
 
     function getAddToCart(Request $request, $id){
@@ -50,6 +57,19 @@ class ProductController extends Controller
     	$cart->reduceByOne($id);
     	Session::put('cart',$cart);
     	return redirect()->route('product.shoppingCart');
+    }
+    function getCheckout(){
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+
+        $order = new Order();
+        $order->cart = serialize($cart);
+        $order->status = 'pending';
+        $order->payment = 'handle';
+
+        Auth::user()->orders()->save($order);
+        Session::forget('cart');
+        return redirect()->route('main');
     }
 }
 
