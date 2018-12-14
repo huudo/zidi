@@ -36,6 +36,14 @@ class ProductsTableSeeder extends Seeder
 
         $product = new Product();
         $product->picture = "https://beautygarden.vn/Upload/Files/a0-12122018021031.jpg";
+        $product->title = "Vong bac 22 K";
+        $product->description = "Vong Bac";
+        $product->price = 15000000;
+        $product->subcategory_id = $category_trangsuc->id;
+        $product->save();
+        
+        $product = new Product();
+        $product->picture = "https://beautygarden.vn/Upload/Files/a0-12122018021031.jpg";
         $product->title = "Nhân sâm 6 tuổi";
         $product->description = "Nhân sâm 6 tuổi 1 hộp 5 kg";
         $product->price = 15000000;

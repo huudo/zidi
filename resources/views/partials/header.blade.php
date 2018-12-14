@@ -3,119 +3,21 @@
         <div class="content-margins">
             <div class="row">
                 <div class="col-md-5 hidden-xs hidden-sm">
-                    <div class="entry"><b>contact us:</b> <a href="tel:+35235551238745">+3  (523) 555 123 8745</a></div>
-                    <div class="entry"><b>email:</b> <a href="mailto:office@exzo.com">office@exzo.com</a></div>
+                    <div class="entry"><b>contact us:</b> <a href="tel:0904075992">0904 075 992</a></div>
+                    <div class="entry"><b>email:</b> <a href="mailto:huudt.dev@gmail.com">huudt.dev@gmail.com</a></div>
                 </div>
                 <div class="col-md-7 col-md-text-right">
-                    <div class="entry"><a class="open-popup" data-rel="1"><b>login</b></a>&nbsp; or &nbsp;<a class="open-popup" data-rel="2"><b>register</b></a></div>
-                    <div class="entry language">
-                        <div class="title"><b>en</b></div>
-                        <div class="language-toggle header-toggle-animation">
-                            <a href="index1.html">fr</a>
-                            <a href="index1.html">ru</a>
-                            <a href="index1.html">it</a>
-                            <a href="index1.html">sp</a>
-                        </div>
-                    </div>
+                    <div class="entry"><a class="open-popup " data-toggle="modal" data-target="#myModalLogin" data-rel="1"><b>Đăng nhập</b></a>&nbsp; or &nbsp;<a class="open-popup" data-rel="2"><b>Đăng ký</b></a></div>
                     <div class="entry hidden-xs hidden-sm"><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
                     <div class="entry hidden-xs hidden-sm cart">
                         <a href="{{route('product.shoppingCart')}}">
-                            <b class="hidden-xs">Your bag</b>
+                            <b class="hidden-xs">Giỏ hàng</b>
                             <span class="cart-icon">
                                 <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                 <span class="cart-label">{{ Session::has('cart') ? Session::get('cart')->totalQty : 0 }}</span>
                             </span>
                             <span class="cart-title hidden-xs">${{ Session::has('cart') ? Session::get('cart')->totalPrice : 0 }}</span>
                         </a>
-                        <!-- <div class="cart-toggle hidden-xs hidden-sm">
-                            <div class="cart-overflow">
-                                <div class="cart-entry clearfix">
-                                    <a class="cart-entry-thumbnail" href="#"><img src="img/product-1.png" alt="" /></a>
-                                    <div class="cart-entry-description">
-                                        <table>
-                                            <tr>
-                                                <td>
-                                                    <div class="h6"><a href="#">modern beat ht</a></div>
-                                                    <div class="simple-article size-1">QUANTITY: 2</div>
-                                                </td>
-                                                <td>
-                                                    <div class="simple-article size-3 grey">$155.00</div>
-                                                    <div class="simple-article size-1">TOTAL: $310.00</div>
-                                                </td>
-                                                <td>
-                                                    <div class="cart-color" style="background: #eee;"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="button-close"></div>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="cart-entry clearfix">
-                                    <a class="cart-entry-thumbnail" href="#"><img src="img/product-2.png" alt="" /></a>
-                                    <div class="cart-entry-description">
-                                        <table>
-                                            <tr>
-                                                <td>
-                                                    <div class="h6"><a href="#">modern beat ht</a></div>
-                                                    <div class="simple-article size-1">QUANTITY: 2</div>
-                                                </td>
-                                                <td>
-                                                    <div class="simple-article size-3 grey">$155.00</div>
-                                                    <div class="simple-article size-1">TOTAL: $310.00</div>
-                                                </td>
-                                                <td>
-                                                    <div class="cart-color" style="background: #bf584b;"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="button-close"></div>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="cart-entry clearfix">
-                                    <a class="cart-entry-thumbnail" href="#"><img src="img/product-3.png" alt="" /></a>
-                                    <div class="cart-entry-description">
-                                        <table>
-                                            <tr>
-                                                <td>
-                                                    <div class="h6"><a href="#">modern beat ht</a></div>
-                                                    <div class="simple-article size-1">QUANTITY: 2</div>
-                                                </td>
-                                                <td>
-                                                    <div class="simple-article size-3 grey">$155.00</div>
-                                                    <div class="simple-article size-1">TOTAL: $310.00</div>
-                                                </td>
-                                                <td>
-                                                    <div class="cart-color" style="background: #facc22;"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="button-close"></div>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="empty-space col-xs-b40"></div>
-                            <div class="row">
-                                <div class="col-xs-6">
-                                    <div class="cell-view empty-space col-xs-b50">
-                                        <div class="simple-article size-5 grey">TOTAL <span class="color">$1195.00</span></div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-6 text-right">
-                                    <a class="button size-2 style-3" href="checkout1.html">
-                                        <span class="button-wrapper">
-                                            <span class="icon"><img src="img/icon-4.png" alt=""></span>
-                                            <span class="text">proceed to checkout</span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                     <div class="hamburger-icon">
                         <span></span>
@@ -138,22 +40,13 @@
                         <nav>
                             <ul>
                                 <li class="active">
-                                    <a href="index1.html">Home</a>
-                                    <div class="menu-toggle"></div>
-                                    <ul>
-                                        <li class="active"><a href="index1.html">Homepage 1</a></li>
-                                        <li><a href="index2.html">Homepage 2</a></li>
-                                        <li><a href="index3.html">Homepage 3</a></li>
-                                        <li><a href="index4.html">Homepage 4</a></li>
-                                        <li><a href="index5.html">Homepage 5</a></li>
-                                        <li><a href="index6.html">Homepage 6</a></li>
-                                    </ul>
+                                    <a href="{{route('main')}}">Home</a>
                                 </li>
                                 <li>
-                                    <a href="about1.html">about us</a>
+                                    <a href="#">about us</a>
                                 </li>
                                 <li class="megamenu-wrapper">
-                                    <a href="products1.html">products</a>
+                                    <a href="#">products</a>
                                     <div class="menu-toggle"></div>
                                     <div class="megamenu">
                                         <div class="links">

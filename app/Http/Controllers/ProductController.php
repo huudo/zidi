@@ -18,12 +18,12 @@ class ProductController extends Controller
         $categories = Category::all();
         //$subcategories = SubCategory::all();
         $products = Product::all();
-        $orders = Auth::user()->orders;
-        $orders->transform(function($order,$key){
-            $order->cart = unserialize($order->cart);
-            return $order;
-        });
-        return view('index',['categories' => $categories,'products' => $products,'orders'=>$orders]);
+        // $orders = Auth::user()->orders;
+        // $orders->transform(function($order,$key){
+        //     $order->cart = unserialize($order->cart);
+        //     return $order;
+        // });
+        return view('index',['categories' => $categories,'products' => $products]);
     }
 
     function getAddToCart(Request $request, $id){

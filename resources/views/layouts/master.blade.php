@@ -12,8 +12,8 @@
     <link href="{{ asset('public/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('public/css/bootstrap.extension.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('public/css/style.css')}}" rel="stylesheet" type="text/css" />
-    <!-- <link href="{{ asset('public/css/swiper.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('public/css/sumoselect.css')}}" rel="stylesheet" type="text/css" /> -->
+    <link href="{{ asset('public/css/swiper.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/css/sumoselect.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('public/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" />
 </head>
 <body>
