@@ -27,14 +27,6 @@ Route:: get('/author/generate-article',[
 	'middleware' => 'roles',
 	'roles' => ['Admin','Author']
 ]);
-Route::get('/admin',[
-	'uses' => 'AppController@getAdminPage',
-	'as' => 'admin'
-]);
-Route::post('/admin/assign-roles',[
-	'uses' => 'AppController@postAdminAssignRoles',
-	'as' => 'admin.assign'
-]);
 Route::get('/signup',[
 	'uses' => 'AuthController@getSignUpPage',
 	'as' => 'signup'
@@ -75,3 +67,25 @@ Route::get('/checkout',[
 	'uses' => 'ProductController@getCheckout',
 	'as' =>'product.checkout'
 ]);
+// Route::get('/admin',[
+// 	'uses' => 'AdminController@getAdminPage',
+// 	'as' => 'admin'
+// ]);
+// Route::post('/admin/assign-roles',[
+// 	'uses' => 'AppController@postAdminAssignRoles',
+// 	'as' => 'admin.assign'
+// ]);
+Route::prefix('admin')->group(function () {
+	Route::get('/',[
+		'uses' => 'AdminController@getAdminPage',
+		'as' => 'admin'
+	]);
+	Route::get('/danh-muc/{id}',[
+		'uses' => 'AdminController@getDanhMuc',
+		'as' => 'admin.danhmuc'
+	]);
+	Route::post('/danh-muc/{id}/addCategory',[
+		'uses' => 'AdminController@postAddCategory',
+		'as' => 'admin.addCategory'
+	]);
+});
