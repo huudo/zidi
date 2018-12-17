@@ -66,12 +66,13 @@
 				</div>
 				<div class="form-group">
 				    <label>Mô tả</label>
-				    <input type="text" name ="description" class="form-control">
+				    <textarea name="description" id="description-editor">
+                                
+                    </textarea>
 				</div>
 				<div class="form-group">
 				    <label>Ảnh đại diện</label>
 				</div>
-	        
 	      	</div>
 	      	<div class="modal-footer">
 	      		{{csrf_field()}}
@@ -81,4 +82,15 @@
     </div>
   </div>
 </div>
+<script src="{{ asset('public/ckeditor/ckeditor.js') }}" charset="utf-8"></script>
+<script>
+CKEDITOR.replace( 'description-editor', {
+        filebrowserBrowseUrl: '{{ asset('public/ckfinder/ckfinder.html') }}',
+        filebrowserImageBrowseUrl: '{{ asset('public/ckfinder/ckfinder.html?type=Images') }}',
+        filebrowserFlashBrowseUrl: '{{ asset('public/ckfinder/ckfinder.html?type=Flash') }}',
+        filebrowserUploadUrl: '{{ asset('public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}',
+        filebrowserImageUploadUrl: '{{ asset('public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}',
+        filebrowserFlashUploadUrl: '{{ asset('public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash') }}'
+    } );
+</script>
 @endsection

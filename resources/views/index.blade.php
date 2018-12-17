@@ -1,5 +1,4 @@
 @extends('layouts.master')
-
 @section('content')
     <div class="header-empty-space"></div>
     <div class="slider-wrapper">
@@ -88,6 +87,7 @@
                                         <li><a class="tab-menu">{{$category->description}}</a></li>
                                     @endif                                    
                                 @endforeach
+
                             </ul>
                         </div>
                         <div class="empty-space col-xs-b30"></div>
@@ -98,7 +98,7 @@
                                     <div class="product-shortcode style-1">
                                         <div class="title">
                                             <!-- <div class="simple-article size-1 color col-xs-b5"><a href="#">{{$product->title}}</a></div> -->
-                                            <div class="h6 animate-to-green"><a href="#">{{$product->title}}</a></div>
+                                            <div class="h6 animate-to-green"><a href="{{route('product.getDetailProduct',['id'=>$product->id])}}">{{$product->title}}</a></div>
                                         </div>
                                         <div class="preview">
                                             <img src="{{$product->picture}}" alt="{{$product->title}}" />
@@ -123,7 +123,9 @@
                                             <div class="simple-article size-4 dark">$ {{$product->price}}</div>
                                         </div>
                                         <div class="description">
-                                            <div class="simple-article text size-2">{{$product->description}}</div>
+                                            <div class="simple-article text size-2">
+                                                <?php echo strip_tags($product->description) ;?>
+                                            </div>
                                             <div class="icons">
                                                 <a class="entry"><i class="fa fa-check" aria-hidden="true"></i></a>
                                                 <a class="entry open-popup" data-rel="3"><i class="fa fa-eye" aria-hidden="true"></i></a>
@@ -1526,5 +1528,4 @@
             </div>
         </div>
     </div>
-
 @endsection

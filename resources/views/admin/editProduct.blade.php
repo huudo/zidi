@@ -32,6 +32,15 @@
         </div>
     </div>
 </div>
-<script src="{{ asset('public/ckeditor/ckeditor.js') }}"></script>
-<script> CKEDITOR.replace('edit-description'); </script>
+<script src="{{ asset('public/ckeditor/ckeditor.js') }}" charset="utf-8"></script>
+<script>
+CKEDITOR.replace( 'edit-description', {
+        filebrowserBrowseUrl: '{{ asset('public/ckfinder/ckfinder.html') }}',
+        filebrowserImageBrowseUrl: '{{ asset('public/ckfinder/ckfinder.html?type=Images') }}',
+        filebrowserFlashBrowseUrl: '{{ asset('public/ckfinder/ckfinder.html?type=Flash') }}',
+        filebrowserUploadUrl: '{{ asset('public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}',
+        filebrowserImageUploadUrl: '{{ asset('public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}',
+        filebrowserFlashUploadUrl: '{{ asset('public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash') }}'
+    } );
+</script>
 @endsection

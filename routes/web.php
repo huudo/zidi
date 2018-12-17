@@ -47,6 +47,10 @@ Route::get('/logout',[
 	'uses' => 'AuthController@getLogout',
 	'as' => 'logout'
 ]);
+Route::get('/product/{id}',[
+	'uses' => 'ProductController@getDetailProduct',
+	'as' => 'product.getDetailProduct'
+]);
 Route::get('/add-to-cart/{id}',[
 	'uses' => 'ProductController@getAddToCart',
 	'as' => 'product.addToCart'

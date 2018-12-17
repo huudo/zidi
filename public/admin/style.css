@@ -7006,3 +7006,10 @@ Media Query
     right: 15px;
     font-size: 20px;
 }
+@media (min-width: 576px){
+    #addProduct  .modal-dialog {
+        max-width: 1000px;
+        margin: 1.75rem auto;
+    }
+}
+

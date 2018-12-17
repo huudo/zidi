@@ -25,7 +25,10 @@ class ProductController extends Controller
         // });
         return view('index',['categories' => $categories,'products' => $products]);
     }
-
+    function getDetailProduct($id){
+        $product = Product::find($id);
+        return view('product.detail',['product' => $product]);
+    }
     function getAddToCart(Request $request, $id){
     	$product = Product::find($id);
     	$oldCart = Session::has('cart') ? Session::get('cart') : null;
