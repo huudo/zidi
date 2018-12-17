@@ -96,4 +96,16 @@ Route::prefix('admin')->group(function () {
 		'uses' => 'AdminController@postAddProduct',
 		'as' => 'admin.addProduct'
 	]);
+	Route::get('product/{id}/edit',[
+		'uses' => 'AdminController@getEditProduct',
+		'as' => 'admin.editProduct'
+	]);
+	Route::post('product/{id}/edit',[
+		'uses' => 'AdminController@postEditProduct',
+		'as' => 'admin.editProduct'
+	]);
+	Route::get('product/{id}/delete',[
+		'uses' => 'AdminController@getDeleteProduct',
+		'as' => 'admin.deleteProduct'
+	]);
 });

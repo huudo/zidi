@@ -69,7 +69,7 @@
 	        
 	      	</div>
 	      	<div class="modal-footer">
-	      		<input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
+	      		{{csrf_field()}}
 		        <button type="submit" class="btn btn-primary">Tạo mới</button>
 	      	</div>
       	</form>

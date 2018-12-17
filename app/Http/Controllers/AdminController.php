@@ -52,4 +52,26 @@ class AdminController extends Controller
     	$product->save();
     	return redirect()->route('admin.subCategory',['id'=>$id]);
     }
+    public function getEditProduct($id){
+        $product = Product::find($id);
+        return view('admin.editProduct',['product'=>$product]);
+    }
+    public function postEditProduct(Request $request,$id){
+        $product = Product::find($id);
+        $title = $request->title;
+        $price = $request->price;
+        $description = $request->description;
+
+        $product->title = $title;
+        $product->price = $price;
+        $product->description = $description;
+        $product->save();
+        return redirect()->route('admin.editProduct',['id'=>$id]);
+        //$title = 
+    }
+    public function getDeleteProduct($id){
+        $product = Product::find($id);
+        $product->delete();
+        return redirect()->back();
+    }
 }

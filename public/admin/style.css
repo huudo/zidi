@@ -1997,6 +1997,8 @@ Pageheader
 
 .page-header {
     margin-bottom: 30px;
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 15px;
 }
 
 .page-breadcrumb {}
@@ -6972,11 +6974,6 @@ Media Query
     padding: 17px 29px;}
 }
 
-
- 
- 
-
-
 }
 
 
@@ -6988,4 +6985,24 @@ Media Query
     padding: 10px;
     box-shadow: 0 0 0px 1px rgba(201, 208, 220, 0.2), 0 1px 1px 1px rgba(20,23,28,.15);
     margin-bottom: 20px;
+}
+.one-product{
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 0 0px 1px rgba(201, 208, 220, 0.2), 0 1px 1px 1px rgba(20,23,28,.15);
+    margin-bottom: 20px;  
+    position: relative;
+}
+.one-product .img-product{
+    text-align: center;
+}
+.one-product .img-product img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.one-product .delete-product {
+    position: absolute;
+    right: 15px;
+    font-size: 20px;
 }

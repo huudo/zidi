@@ -23,19 +23,21 @@
     </div>
     <div class="row">
     	@foreach($products as $product)
-    	<div class="col-xs-12 col-ms-6 col-md-4">
+    	<div class="col-xs-12 col-ms-6 col-md-3">
     		<div class="one-product">
-    			<form action="" method="POST">
-    				<div class="form-group">
-    					<label>Tên sản phẩm</label>
-						<input type="text" class="form-control" name="title" value="{{$product->title}}">
-    				</div>
-    				<div class="form-group">
-    					<label>Mô tả</label>
-						<input type="text" class="form-control" name="description" value="{{$product->description}}">
-    				</div>
-    				<button type="submit" class="btn btn-primary mb-2">Cập nhật</button>
-    			</form>
+                <div class="delete-product">
+                    <a href="{{route('admin.deleteProduct',['id'=>$product->id])}}"><i class="fas fa-times"></i></a>
+                </div>
+    			<div class="title">
+                    <h3><a href="{{route('admin.editProduct',['id'=>$product->id])}}">{{$product->title}}</a></h3>
+                </div>
+                <div class="img-product">
+                    <img src="{{$product->picture}}">
+                </div>
+                <div class="description-product">
+                    <h4>Mô tả</h4>
+                    <p>{{$product->description}}</p>
+                </div>
     		</div>
     	</div>
     	@endforeach
@@ -72,7 +74,7 @@
 	        
 	      	</div>
 	      	<div class="modal-footer">
-	      		<input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
+	      		{{csrf_field()}}
 		        <button type="submit" class="btn btn-primary">Tạo mới</button>
 	      	</div>
       	</form>
