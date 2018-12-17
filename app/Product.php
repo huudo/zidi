@@ -10,6 +10,6 @@ class Product extends Model
     	return $this->belongsToMany('App\Order', 'order_product', 'product_id', 'order_id')->withTimestamps();
     }
     function sub_categories(){
-    	return $this->belongsTo('App\SubCategory');
+    	return $this->belongsTo('App\SubCategory','subcategory_id');
     }
 }

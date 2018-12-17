@@ -88,4 +88,12 @@ Route::prefix('admin')->group(function () {
 		'uses' => 'AdminController@postAddCategory',
 		'as' => 'admin.addCategory'
 	]);
+	Route::get('danh-muc-con/{id}',[
+		'uses' => 'AdminController@getDanhMucCon',
+		'as' => 'admin.subCategory'
+	]);
+	Route::post('product/{id}/addProduct',[
+		'uses' => 'AdminController@postAddProduct',
+		'as' => 'admin.addProduct'
+	]);
 });

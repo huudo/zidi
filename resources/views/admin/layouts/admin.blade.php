@@ -165,7 +165,7 @@
                                             <ul class="nav flex-column">
                                                 @foreach($category->subcategories as $sub)
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="index.html">{{$sub->description}}</a>
+                                                        <a class="nav-link" href="{{route('admin.subCategory',['id'=>$sub->id])}}">{{$sub->description}}</a>
                                                     </li>
                                                 @endforeach
                                                 <li class="nav-item">

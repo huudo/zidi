@@ -10,6 +10,6 @@ class SubCategory extends Model
     	return $this->belongsTo('App\Category','category_id');
     }
     function products(){
-    	return $this->hasMany('App\Product');
+    	return $this->hasMany('App\Product','subcategory_id');
     }
 }
