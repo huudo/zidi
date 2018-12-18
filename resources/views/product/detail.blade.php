@@ -100,7 +100,7 @@
                             <div class="col-sm-6 col-xs-b10 col-sm-b0">
                                 <a class="button size-2 style-2 block" href="#">
                                     <span class="button-wrapper">
-                                        <span class="icon"><img src="img/icon-2.png" alt=""></span>
+                                        <span class="icon"><img src="" alt=""></span>
                                         <span class="text">add to cart</span>
                                     </span>
                                 </a>
@@ -148,7 +148,7 @@
                         <div class="row">
                             <div class="col-sm-6 col-xs-b30 col-sm-b0">
                                 <div class="simple-article">
-                                    <img class="rounded-image" src="img/thumbnail-15.jpg" alt="">
+                                    <img class="rounded-image" src="" alt="">
                                 </div>
                                 <div class="empty-space col-xs-b25"></div>
                                 <div class="h5">Nullam et massa nulla</div>
@@ -157,7 +157,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="simple-article">
-                                    <img class="rounded-image" src="img/thumbnail-16.jpg" alt="">
+                                    <img class="rounded-image" src="" alt="">
                                 </div>
                                 <div class="empty-space col-xs-b25"></div>
                                 <div class="h5">Vivamus ut posuere nunc</div>
@@ -170,7 +170,7 @@
 
                         <div class="left-right-entry clearfix align-right">
                             <div class="preview-wrapper">
-                                <img class="preview" src="img/thumbnail-17.jpg" alt="">
+                                <img class="preview" src="" alt="">
                             </div>
                             <div class="description">
                                 <div class="h5">Aenean a tincidunt felis</div>
@@ -187,7 +187,7 @@
 
                         <div class="left-right-entry clearfix">
                             <div class="preview-wrapper">
-                                <img class="preview" src="img/thumbnail-18.jpg" alt="">
+                                <img class="preview" src="" alt="">
                             </div>
                             <div class="description">
                                 <div class="h5">Aenean a tincidunt felis</div>
@@ -260,13 +260,13 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="simple-article size-2 text-center">
-                                    <img src="img/thumbnail-19.jpg" alt="">
+                                    <img src="" alt="">
                                     <p><br>Stainless Steel</p>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="simple-article size-2 text-center">
-                                    <img src="img/thumbnail-20.jpg" alt="">
+                                    <img src="" alt="">
                                     <p><br>Space Black Stainless Steel</p>
                                 </div>
                             </div>
@@ -330,13 +330,13 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="simple-article size-2 text-center">
-                                    <img src="img/thumbnail-21.jpg" alt="">
+                                    <img src="" alt="">
                                     <p><br>Stainless Steel</p>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="simple-article size-2 text-center">
-                                    <img src="img/thumbnail-22.jpg" alt="">
+                                    <img src="" alt="">
                                     <p><br>Space Black Stainless Steel</p>
                                 </div>
                             </div>
@@ -347,7 +347,7 @@
                         <div class="testimonial-entry">
                             <div class="row col-xs-b20">
                                 <div class="col-xs-8">
-                                    <img class="preview" src="img/testimonial-1.jpg" alt="">
+                                    <img class="preview" src="" alt="">
                                     <div class="heading-description">
                                         <div class="h6 col-xs-b5">Dorian gray</div>
                                         <div class="rate-wrapper align-inline">
@@ -374,7 +374,7 @@
                         <div class="testimonial-entry">
                             <div class="row col-xs-b20">
                                 <div class="col-xs-8">
-                                    <img class="preview" src="img/testimonial-2.jpg" alt="">
+                                    <img class="preview" src="" alt="">
                                     <div class="heading-description">
                                         <div class="h6 col-xs-b5">alan doe</div>
                                         <div class="rate-wrapper align-inline">
@@ -401,7 +401,7 @@
                         <div class="testimonial-entry">
                             <div class="row col-xs-b20">
                                 <div class="col-xs-8">
-                                    <img class="preview" src="img/testimonial-3.jpg" alt="">
+                                    <img class="preview" src="" alt="">
                                     <div class="heading-description">
                                         <div class="h6 col-xs-b5">samantha rae</div>
                                         <div class="rate-wrapper align-inline">
@@ -466,7 +466,7 @@
                                 <div class="col-xs-6 text-right">
                                     <div class="button size-2 style-3">
                                         <span class="button-wrapper">
-                                            <span class="icon"><img src="img/icon-4.png" alt=""></span>
+                                            <span class="icon"><img src="" alt=""></span>
                                             <span class="text">submit</span>
                                         </span>
                                         <input type="submit" value="">
@@ -485,7 +485,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide swiper-slide-active" style="width: 848px;">
                             <div class="banner-shortcode style-1">
-                                <div class="background" style="background-image: url(img/thumbnail-14.jpg);"></div>
+                                <div class="background" style="background-image: url('');"></div>
                                 <div class="description valign-middle">
                                     <div class="valign-middle-content">
                                         <div class="simple-article size-3 light fulltransparent">DON'T MISS!</div>
@@ -494,7 +494,7 @@
                                         <div class="empty-space col-xs-b25"></div>
                                         <a class="button size-1 style-3" href="#">
                                             <span class="button-wrapper">
-                                                <span class="icon"><img src="img/icon-4.png" alt=""></span>
+                                                <span class="icon"><img src="" alt=""></span>
                                                 <span class="text">learn more</span>
                                             </span>
                                         </a>
@@ -505,7 +505,7 @@
                         </div>
                         <div class="swiper-slide swiper-slide-next" style="width: 848px;">
                             <div class="banner-shortcode style-1">
-                                <div class="background" style="background-image: url(img/thumbnail-10.jpg);"></div>
+                                <div class="background" style="background-image: url('');"></div>
                                 <div class="description valign-middle">
                                     <div class="valign-middle-content">
                                         <div class="simple-article size-3 light fulltransparent">DON'T MISS!</div>
@@ -514,7 +514,7 @@
                                         <div class="empty-space col-xs-b25"></div>
                                         <a class="button size-1 style-3" href="#">
                                             <span class="button-wrapper">
-                                                <span class="icon"><img src="img/icon-4.png" alt=""></span>
+                                                <span class="icon"><img src="" alt=""></span>
                                                 <span class="text">learn more</span>
                                             </span>
                                         </a>
@@ -572,7 +572,7 @@
                                     <div class="swiper-slide swiper-slide-active" style="width: 263px;">
                                         <div class="banner-shortcode style-2">
                                             <div class="content">
-                                                <div class="background" style="background-image: url(img/thumbnail-11.jpg);"></div>
+                                                <div class="background" style="background-image: url('');"></div>
                                                 <div class="description valign-middle">
                                                     <div class="valign-middle-content">
                                                         <div class="simple-article size-1 color"><a href="#">GADGETS</a></div>
@@ -586,7 +586,7 @@
                                     <div class="swiper-slide swiper-slide-next" style="width: 263px;">
                                         <div class="banner-shortcode style-2">
                                             <div class="content">
-                                                <div class="background" style="background-image: url(img/thumbnail-11.jpg);"></div>
+                                                <div class="background" style="background-image: url('');"></div>
                                                 <div class="description valign-middle">
                                                     <div class="valign-middle-content">
                                                         <div class="simple-article size-1 color"><a href="#">GADGETS</a></div>
@@ -600,7 +600,7 @@
                                     <div class="swiper-slide" style="width: 263px;">
                                         <div class="banner-shortcode style-2">
                                             <div class="content">
-                                                <div class="background" style="background-image: url(img/thumbnail-11.jpg);"></div>
+                                                <div class="background" style="background-image: url('');"></div>
                                                 <div class="description valign-middle">
                                                     <div class="valign-middle-content">
                                                         <div class="simple-article size-1 color"><a href="#">GADGETS</a></div>
@@ -614,7 +614,7 @@
                                     <div class="swiper-slide" style="width: 263px;">
                                         <div class="banner-shortcode style-2">
                                             <div class="content">
-                                                <div class="background" style="background-image: url(img/thumbnail-11.jpg);"></div>
+                                                <div class="background" style="background-image: url('');"></div>
                                                 <div class="description valign-middle">
                                                     <div class="valign-middle-content">
                                                         <div class="simple-article size-1 color"><a href="#">GADGETS</a></div>
@@ -634,7 +634,7 @@
                         <div class="col-sm-6 col-md-12">
                             <div class="h4 col-xs-b25">most viewed</div>
                             <div class="product-shortcode style-4 clearfix">
-                                <a class="preview" href="#"><img src="img/product-28.jpg" alt=""></a>
+                                <a class="preview" href="#"><img src="" alt=""></a>
                                 <div class="description">
                                     <div class="simple-article color size-1 col-xs-b5"><a href="#">WIRELESS</a></div>
                                     <h6 class="h6 col-xs-b10"><a href="#">wireless headphones</a></h6>
@@ -643,7 +643,7 @@
                             </div>
                             <div class="col-xs-b10"></div>
                             <div class="product-shortcode style-4 clearfix">
-                                <a class="preview" href="#"><img src="img/product-29.jpg" alt=""></a>
+                                <a class="preview" href="#"><img src="" alt=""></a>
                                 <div class="description">
                                     <div class="simple-article color size-1 col-xs-b5"><a href="#">CASES</a></div>
                                     <h6 class="h6 col-xs-b10"><a href="#">earphones case</a></h6>
@@ -652,7 +652,7 @@
                             </div>
                             <div class="col-xs-b10"></div>
                             <div class="product-shortcode style-4 clearfix">
-                                <a class="preview" href="#"><img src="img/product-30.jpg" alt=""></a>
+                                <a class="preview" href="#"><img src="" alt=""></a>
                                 <div class="description">
                                     <div class="simple-article color size-1 col-xs-b5"><a href="#">CASES</a></div>
                                     <h6 class="h6 col-xs-b10"><a href="#">headphones case</a></h6>
@@ -678,18 +678,18 @@
                                                 <div class="h6 animate-to-green"><a href="#">high-end spectre x360</a></div>
                                             </div>
                                             <div class="preview">
-                                                <img src="img/product-26.jpg" alt="">
+                                                <img src="" alt="">
                                                 <div class="preview-buttons valign-middle">
                                                     <div class="valign-middle-content">
                                                         <a class="button size-2 style-2" href="#">
                                                             <span class="button-wrapper">
-                                                                <span class="icon"><img src="img/icon-1.png" alt=""></span>
+                                                                <span class="icon"><img src="" alt=""></span>
                                                                 <span class="text">Learn More</span>
                                                             </span>
                                                         </a>
                                                         <a class="button size-2 style-3" href="#">
                                                             <span class="button-wrapper">
-                                                                <span class="icon"><img src="img/icon-3.png" alt=""></span>
+                                                                <span class="icon"><img src="" alt=""></span>
                                                                 <span class="text">Add To Cart</span>
                                                             </span>
                                                         </a>
@@ -717,18 +717,18 @@
                                                 <div class="h6 animate-to-green"><a href="#">high-end spectre x360</a></div>
                                             </div>
                                             <div class="preview">
-                                                <img src="img/product-27.jpg" alt="">
+                                                <img src="" alt="">
                                                 <div class="preview-buttons valign-middle">
                                                     <div class="valign-middle-content">
                                                         <a class="button size-2 style-2" href="#">
                                                             <span class="button-wrapper">
-                                                                <span class="icon"><img src="img/icon-1.png" alt=""></span>
+                                                                <span class="icon"><img src="" alt=""></span>
                                                                 <span class="text">Learn More</span>
                                                             </span>
                                                         </a>
                                                         <a class="button size-2 style-3" href="#">
                                                             <span class="button-wrapper">
-                                                                <span class="icon"><img src="img/icon-3.png" alt=""></span>
+                                                                <span class="icon"><img src="" alt=""></span>
                                                                 <span class="text">Add To Cart</span>
                                                             </span>
                                                         </a>
@@ -756,18 +756,18 @@
                                                 <div class="h6 animate-to-green"><a href="#">high-end spectre x360</a></div>
                                             </div>
                                             <div class="preview">
-                                                <img src="img/product-26.jpg" alt="">
+                                                <img src="" alt="">
                                                 <div class="preview-buttons valign-middle">
                                                     <div class="valign-middle-content">
                                                         <a class="button size-2 style-2" href="#">
                                                             <span class="button-wrapper">
-                                                                <span class="icon"><img src="img/icon-1.png" alt=""></span>
+                                                                <span class="icon"><img src="" alt=""></span>
                                                                 <span class="text">Learn More</span>
                                                             </span>
                                                         </a>
                                                         <a class="button size-2 style-3" href="#">
                                                             <span class="button-wrapper">
-                                                                <span class="icon"><img src="img/icon-3.png" alt=""></span>
+                                                                <span class="icon"><img src="" alt=""></span>
                                                                 <span class="text">Add To Cart</span>
                                                             </span>
                                                         </a>
@@ -795,18 +795,18 @@
                                                 <div class="h6 animate-to-green"><a href="#">high-end spectre x360</a></div>
                                             </div>
                                             <div class="preview">
-                                                <img src="img/product-25.jpg" alt="">
+                                                <img src="" alt="">
                                                 <div class="preview-buttons valign-middle">
                                                     <div class="valign-middle-content">
                                                         <a class="button size-2 style-2" href="#">
                                                             <span class="button-wrapper">
-                                                                <span class="icon"><img src="img/icon-1.png" alt=""></span>
+                                                                <span class="icon"><img src="" alt=""></span>
                                                                 <span class="text">Learn More</span>
                                                             </span>
                                                         </a>
                                                         <a class="button size-2 style-3" href="#">
                                                             <span class="button-wrapper">
-                                                                <span class="icon"><img src="img/icon-3.png" alt=""></span>
+                                                                <span class="icon"><img src="" alt=""></span>
                                                                 <span class="text">Add To Cart</span>
                                                             </span>
                                                         </a>
@@ -837,7 +837,7 @@
                             <div class="h4 col-xs-b25">latest post</div>
                             <div class="row m5 text-center">
                                 <div class="blog-shortcode style-1">
-                                    <a href="#" class="preview simple-mouseover"><img src="img/thumbnail-12.jpg" alt=""></a>
+                                    <a href="#" class="preview simple-mouseover"><img src="" alt=""></a>
                                     <div class="description">
                                         <div class="simple-article size-1 grey col-xs-b5">APR 07 / 15 &nbsp;&nbsp;&nbsp;<a href="#" class="color">GADGETS</a></div>
                                         <h6 class="h6 col-xs-b10"><a href="#">Phasellus rhoncus in</a></h6>
@@ -846,7 +846,7 @@
                                 </div>
                                 
                                 <div class="blog-shortcode style-1">
-                                    <a href="#" class="preview simple-mouseover"><img src="img/thumbnail-13.jpg" alt=""></a>
+                                    <a href="#" class="preview simple-mouseover"><img src="" alt=""></a>
                                     <div class="description">
                                         <div class="simple-article size-1 grey col-xs-b5">APR 07 / 15 &nbsp;&nbsp;&nbsp;<a href="#" class="color">GADGETS</a></div>
                                         <h6 class="h6 col-xs-b10"><a href="#">Phasellus rhoncus in</a></h6>

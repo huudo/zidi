@@ -98,7 +98,7 @@
                                     <div class="product-shortcode style-1">
                                         <div class="title">
                                             <!-- <div class="simple-article size-1 color col-xs-b5"><a href="#">{{$product->title}}</a></div> -->
-                                            <div class="h6 animate-to-green"><a href="{{route('product.getDetailProduct',['id'=>$product->id])}}">{{$product->title}}</a></div>
+                                            <div class="h6 animate-to-green"><a href="{{route('product.getDetailProduct',['id'=>$product->slug])}}">{{$product->title}}</a></div>
                                         </div>
                                         <div class="preview">
                                             <img src="{{$product->picture}}" alt="{{$product->title}}" />
@@ -110,7 +110,7 @@
                                                             <span class="text">Learn More</span>
                                                         </span>
                                                     </a>
-                                                    <a class="button size-2 style-3" href="{{ route('product.addToCart',['id' => $product->id])}}">
+                                                    <a class="button size-2 style-3 add-to-card" href="#" data-href = "/add-to-card/{{$product->id}}">
                                                         <span class="button-wrapper">
                                                             <span class="icon"><img src="#" alt=""></span>
                                                             <span class="text">Add To Cart</span>
@@ -146,7 +146,7 @@
                                             <div class="h6 animate-to-green"><a href="#">Smartphone vibe x2</a></div>
                                         </div>
                                         <div class="preview">
-                                            <img src="img/product-7.jpg" alt="" />
+                                            <img src="#" alt="" />
                                             <div class="preview-buttons valign-middle">
                                                 <div class="valign-middle-content">
                                                     <a class="button size-2 style-2" href="#">
@@ -184,7 +184,7 @@
                                             <div class="h6 animate-to-green"><a href="#">Smartphone vibe x2</a></div>
                                         </div>
                                         <div class="preview">
-                                            <img src="img/product-9.jpg" alt="" />
+                                            <img src="#" alt="" />
                                             <div class="preview-buttons valign-middle">
                                                 <div class="valign-middle-content">
                                                     <a class="button size-2 style-2" href="#">
@@ -222,7 +222,7 @@
                                             <div class="h6 animate-to-green"><a href="#">Smartphone vibe x2</a></div>
                                         </div>
                                         <div class="preview">
-                                            <img src="img/product-11.jpg" alt="" />
+                                            <img src="" alt="" />
                                             <div class="preview-buttons valign-middle">
                                                 <div class="valign-middle-content">
                                                     <a class="button size-2 style-2" href="#">
@@ -302,7 +302,7 @@
                                             <div class="h6 animate-to-green"><a href="#">Smartphone vibe x2</a></div>
                                         </div>
                                         <div class="preview">
-                                            <img src="img/product-10.jpg" alt="" />
+                                            <img src="" alt="" />
                                             <div class="preview-buttons valign-middle">
                                                 <div class="valign-middle-content">
                                                     <a class="button size-2 style-2" href="#">
@@ -340,7 +340,7 @@
                                             <div class="h6 animate-to-green"><a href="#">Smartphone vibe x2</a></div>
                                         </div>
                                         <div class="preview">
-                                            <img src="img/product-12.jpg" alt="" />
+                                            <img src="" alt="" />
                                             <div class="preview-buttons valign-middle">
                                                 <div class="valign-middle-content">
                                                     <a class="button size-2 style-2" href="#">
@@ -392,7 +392,7 @@
                                     </span>
                                 </a>
                                 <a class="product-shortcode style-2" href="#">
-                                    <span class="preview"><img src="img/product-17.png" alt="" /></span>
+                                    <span class="preview"><img src="" alt="" /></span>
                                     <span class="description">
                                         <span class="h6 animate-to-green">smart watches</span>
                                         <span class="simple-article size-1 animate-to-fulltransparent">137 PRODUCTS</span>
@@ -401,30 +401,14 @@
                             </div>
                             <div class="swiper-slide">
                                 <a class="product-shortcode style-2" href="#">
-                                    <span class="preview"><img src="img/product-14.png" alt="" /></span>
+                                    <span class="preview"><img src="" alt="" /></span>
                                     <span class="description">
                                         <span class="h6 animate-to-green">smart watches</span>
                                         <span class="simple-article size-1 animate-to-fulltransparent">137 PRODUCTS</span>
                                     </span>
                                 </a>
                                 <a class="product-shortcode style-2" href="#">
-                                    <span class="preview"><img src="img/product-18.png" alt="" /></span>
-                                    <span class="description">
-                                        <span class="h6 animate-to-green">smart watches</span>
-                                        <span class="simple-article size-1 animate-to-fulltransparent">137 PRODUCTS</span>
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a class="product-shortcode style-2" href="#">
-                                    <span class="preview"><img src="img/product-15.png" alt="" /></span>
-                                    <span class="description">
-                                        <span class="h6 animate-to-green">smart watches</span>
-                                        <span class="simple-article size-1 animate-to-fulltransparent">137 PRODUCTS</span>
-                                    </span>
-                                </a>
-                                <a class="product-shortcode style-2" href="#">
-                                    <span class="preview"><img src="img/product-19.png" alt="" /></span>
+                                    <span class="preview"><img src="" alt="" /></span>
                                     <span class="description">
                                         <span class="h6 animate-to-green">smart watches</span>
                                         <span class="simple-article size-1 animate-to-fulltransparent">137 PRODUCTS</span>
@@ -433,30 +417,14 @@
                             </div>
                             <div class="swiper-slide">
                                 <a class="product-shortcode style-2" href="#">
-                                    <span class="preview"><img src="img/product-16.png" alt="" /></span>
+                                    <span class="preview"><img src="" alt="" /></span>
                                     <span class="description">
                                         <span class="h6 animate-to-green">smart watches</span>
                                         <span class="simple-article size-1 animate-to-fulltransparent">137 PRODUCTS</span>
                                     </span>
                                 </a>
                                 <a class="product-shortcode style-2" href="#">
-                                    <span class="preview"><img src="img/product-20.png" alt="" /></span>
-                                    <span class="description">
-                                        <span class="h6 animate-to-green">smart watches</span>
-                                        <span class="simple-article size-1 animate-to-fulltransparent">137 PRODUCTS</span>
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a class="product-shortcode style-2" href="#">
-                                    <span class="preview"><img src="img/product-15.png" alt="" /></span>
-                                    <span class="description">
-                                        <span class="h6 animate-to-green">smart watches</span>
-                                        <span class="simple-article size-1 animate-to-fulltransparent">137 PRODUCTS</span>
-                                    </span>
-                                </a>
-                                <a class="product-shortcode style-2" href="#">
-                                    <span class="preview"><img src="img/product-16.png" alt="" /></span>
+                                    <span class="preview"><img src="" alt="" /></span>
                                     <span class="description">
                                         <span class="h6 animate-to-green">smart watches</span>
                                         <span class="simple-article size-1 animate-to-fulltransparent">137 PRODUCTS</span>
@@ -465,14 +433,46 @@
                             </div>
                             <div class="swiper-slide">
                                 <a class="product-shortcode style-2" href="#">
-                                    <span class="preview"><img src="img/product-13.png" alt="" /></span>
+                                    <span class="preview"><img src="" alt="" /></span>
                                     <span class="description">
                                         <span class="h6 animate-to-green">smart watches</span>
                                         <span class="simple-article size-1 animate-to-fulltransparent">137 PRODUCTS</span>
                                     </span>
                                 </a>
                                 <a class="product-shortcode style-2" href="#">
-                                    <span class="preview"><img src="img/product-14.png" alt="" /></span>
+                                    <span class="preview"><img src="" alt="" /></span>
+                                    <span class="description">
+                                        <span class="h6 animate-to-green">smart watches</span>
+                                        <span class="simple-article size-1 animate-to-fulltransparent">137 PRODUCTS</span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a class="product-shortcode style-2" href="#">
+                                    <span class="preview"><img src="" alt="" /></span>
+                                    <span class="description">
+                                        <span class="h6 animate-to-green">smart watches</span>
+                                        <span class="simple-article size-1 animate-to-fulltransparent">137 PRODUCTS</span>
+                                    </span>
+                                </a>
+                                <a class="product-shortcode style-2" href="#">
+                                    <span class="preview"><img src="" alt="" /></span>
+                                    <span class="description">
+                                        <span class="h6 animate-to-green">smart watches</span>
+                                        <span class="simple-article size-1 animate-to-fulltransparent">137 PRODUCTS</span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a class="product-shortcode style-2" href="#">
+                                    <span class="preview"><img src="" alt="" /></span>
+                                    <span class="description">
+                                        <span class="h6 animate-to-green">smart watches</span>
+                                        <span class="simple-article size-1 animate-to-fulltransparent">137 PRODUCTS</span>
+                                    </span>
+                                </a>
+                                <a class="product-shortcode style-2" href="#">
+                                    <span class="preview"><img src="" alt="" /></span>
                                     <span class="description">
                                         <span class="h6 animate-to-green">smart watches</span>
                                         <span class="simple-article size-1 animate-to-fulltransparent">137 PRODUCTS</span>
@@ -493,7 +493,7 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="banner-shortcode style-1">
-                                    <div class="background" style="background-image: url(img/thumbnail-10.jpg);"></div>
+                                    <div class="background" style="background-image: url('');"></div>
                                     <div class="description valign-middle">
                                         <div class="valign-middle-content">
                                             <div class="simple-article size-3 light fulltransparent">DON'T MISS!</div>
@@ -502,7 +502,7 @@
                                             <div class="empty-space col-xs-b25"></div>
                                             <a class="button size-1 style-3" href="#">
                                                 <span class="button-wrapper">
-                                                    <span class="icon"><img src="img/icon-4.png" alt=""></span>
+                                                    <span class="icon"><img src="" alt=""></span>
                                                     <span class="text">learn more</span>
                                                 </span>
                                             </a>
@@ -513,7 +513,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="banner-shortcode style-1">
-                                    <div class="background" style="background-image: url(img/thumbnail-14.jpg);"></div>
+                                    <div class="background" style="background-image: url('');"></div>
                                     <div class="description valign-middle">
                                         <div class="valign-middle-content">
                                             <div class="simple-article size-3 light fulltransparent">DON'T MISS!</div>
@@ -522,7 +522,7 @@
                                             <div class="empty-space col-xs-b25"></div>
                                             <a class="button size-1 style-3" href="#">
                                                 <span class="button-wrapper">
-                                                    <span class="icon"><img src="img/icon-4.png" alt=""></span>
+                                                    <span class="icon"><img src="" alt=""></span>
                                                     <span class="text">learn more</span>
                                                 </span>
                                             </a>
@@ -562,10 +562,10 @@
                                         <div class="swiper-button-next style-1"></div>
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
-                                                <img src="img/product-21.jpg" alt="" />
+                                                <img src="" alt="" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="img/product-23.jpg" alt="" />
+                                                <img src="" alt="" />
                                             </div>
                                         </div>
                                     </div>
@@ -583,13 +583,13 @@
                                         <div class="buttons-wrapper">
                                             <a class="button size-2 style-2" href="#">
                                                 <span class="button-wrapper">
-                                                    <span class="icon"><img src="img/icon-1.png" alt=""></span>
+                                                    <span class="icon"><img src="" alt=""></span>
                                                     <span class="text">Learn More</span>
                                                 </span>
                                             </a>
                                             <a class="button size-2 style-3" href="#">
                                                 <span class="button-wrapper">
-                                                    <span class="icon"><img src="img/icon-3.png" alt=""></span>
+                                                    <span class="icon"><img src="" alt=""></span>
                                                     <span class="text">Add To Cart</span>
                                                 </span>
                                             </a>
@@ -616,10 +616,10 @@
                                         <div class="swiper-button-next style-1"></div>
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
-                                                <img src="img/product-22.jpg" alt="" />
+                                                <img src="" alt="" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="img/product-24.jpg" alt="" />
+                                                <img src="" alt="" />
                                             </div>
                                         </div>
                                     </div>
@@ -637,13 +637,13 @@
                                         <div class="buttons-wrapper">
                                             <a class="button size-2 style-2" href="#">
                                                 <span class="button-wrapper">
-                                                    <span class="icon"><img src="img/icon-1.png" alt=""></span>
+                                                    <span class="icon"><img src="" alt=""></span>
                                                     <span class="text">Learn More</span>
                                                 </span>
                                             </a>
                                             <a class="button size-2 style-3" href="#">
                                                 <span class="button-wrapper">
-                                                    <span class="icon"><img src="img/icon-3.png" alt=""></span>
+                                                    <span class="icon"><img src="" alt=""></span>
                                                     <span class="text">Add To Cart</span>
                                                 </span>
                                             </a>
@@ -670,10 +670,10 @@
                                         <div class="swiper-button-next style-1"></div>
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
-                                                <img src="img/product-21.jpg" alt="" />
+                                                <img src="" alt="" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="img/product-23.jpg" alt="" />
+                                                <img src="" alt="" />
                                             </div>
                                         </div>
                                     </div>
@@ -691,13 +691,13 @@
                                         <div class="buttons-wrapper">
                                             <a class="button size-2 style-2" href="#">
                                                 <span class="button-wrapper">
-                                                    <span class="icon"><img src="img/icon-1.png" alt=""></span>
+                                                    <span class="icon"><img src="" alt=""></span>
                                                     <span class="text">Learn More</span>
                                                 </span>
                                             </a>
                                             <a class="button size-2 style-3" href="#">
                                                 <span class="button-wrapper">
-                                                    <span class="icon"><img src="img/icon-3.png" alt=""></span>
+                                                    <span class="icon"><img src="" alt=""></span>
                                                     <span class="text">Add To Cart</span>
                                                 </span>
                                             </a>
@@ -724,10 +724,10 @@
                                         <div class="swiper-button-next style-1"></div>
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
-                                                <img src="img/product-22.jpg" alt="" />
+                                                <img src="" alt="" />
                                             </div>
                                             <div class="swiper-slide">
-                                                <img src="img/product-24.jpg" alt="" />
+                                                <img src="" alt="" />
                                             </div>
                                         </div>
                                     </div>
@@ -745,13 +745,13 @@
                                         <div class="buttons-wrapper">
                                             <a class="button size-2 style-2" href="#">
                                                 <span class="button-wrapper">
-                                                    <span class="icon"><img src="img/icon-1.png" alt=""></span>
+                                                    <span class="icon"><img src="" alt=""></span>
                                                     <span class="text">Learn More</span>
                                                 </span>
                                             </a>
                                             <a class="button size-2 style-3" href="#">
                                                 <span class="button-wrapper">
-                                                    <span class="icon"><img src="img/icon-3.png" alt=""></span>
+                                                    <span class="icon"><img src="" alt=""></span>
                                                     <span class="text">Add To Cart</span>
                                                 </span>
                                             </a>
@@ -793,18 +793,18 @@
                                             <div class="h6 animate-to-green"><a href="#">Smartphone vibe x2</a></div>
                                         </div>
                                         <div class="preview">
-                                            <img src="img/product-25.jpg" alt="" />
+                                            <img src="" alt="" />
                                             <div class="preview-buttons valign-middle">
                                                 <div class="valign-middle-content">
                                                     <a class="button size-2 style-2" href="#">
                                                         <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-1.png" alt=""></span>
+                                                            <span class="icon"><img src="" alt=""></span>
                                                             <span class="text">Learn More</span>
                                                         </span>
                                                     </a>
                                                     <a class="button size-2 style-3" href="#">
                                                         <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-3.png" alt=""></span>
+                                                            <span class="icon"><img src="" alt=""></span>
                                                             <span class="text">Add To Cart</span>
                                                         </span>
                                                     </a>
@@ -836,18 +836,18 @@
                                             <div class="h6 animate-to-green"><a href="#">Smartphone vibe x2</a></div>
                                         </div>
                                         <div class="preview">
-                                            <img src="img/product-26.jpg" alt="" />
+                                            <img src="" alt="" />
                                             <div class="preview-buttons valign-middle">
                                                 <div class="valign-middle-content">
                                                     <a class="button size-2 style-2" href="#">
                                                         <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-1.png" alt=""></span>
+                                                            <span class="icon"><img src="" alt=""></span>
                                                             <span class="text">Learn More</span>
                                                         </span>
                                                     </a>
                                                     <a class="button size-2 style-3" href="#">
                                                         <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-3.png" alt=""></span>
+                                                            <span class="icon"><img src="" alt=""></span>
                                                             <span class="text">Add To Cart</span>
                                                         </span>
                                                     </a>
@@ -874,18 +874,18 @@
                                             <div class="h6 animate-to-green"><a href="#">Smartphone vibe x2</a></div>
                                         </div>
                                         <div class="preview">
-                                            <img src="img/product-27.jpg" alt="" />
+                                            <img src="" alt="" />
                                             <div class="preview-buttons valign-middle">
                                                 <div class="valign-middle-content">
                                                     <a class="button size-2 style-2" href="#">
                                                         <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-1.png" alt=""></span>
+                                                            <span class="icon"><img src="" alt=""></span>
                                                             <span class="text">Learn More</span>
                                                         </span>
                                                     </a>
                                                     <a class="button size-2 style-3" href="#">
                                                         <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-3.png" alt=""></span>
+                                                            <span class="icon"><img src="" alt=""></span>
                                                             <span class="text">Add To Cart</span>
                                                         </span>
                                                     </a>
@@ -921,18 +921,18 @@
                                             <div class="h6 animate-to-green"><a href="#">Smartphone vibe x2</a></div>
                                         </div>
                                         <div class="preview">
-                                            <img src="img/product-26.jpg" alt="" />
+                                            <img src="" alt="" />
                                             <div class="preview-buttons valign-middle">
                                                 <div class="valign-middle-content">
                                                     <a class="button size-2 style-2" href="#">
                                                         <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-1.png" alt=""></span>
+                                                            <span class="icon"><img src="" alt=""></span>
                                                             <span class="text">Learn More</span>
                                                         </span>
                                                     </a>
                                                     <a class="button size-2 style-3" href="#">
                                                         <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-3.png" alt=""></span>
+                                                            <span class="icon"><img src="" alt=""></span>
                                                             <span class="text">Add To Cart</span>
                                                         </span>
                                                     </a>
@@ -959,18 +959,18 @@
                                             <div class="h6 animate-to-green"><a href="#">Smartphone vibe x2</a></div>
                                         </div>
                                         <div class="preview">
-                                            <img src="img/product-27.jpg" alt="" />
+                                            <img src="" alt="" />
                                             <div class="preview-buttons valign-middle">
                                                 <div class="valign-middle-content">
                                                     <a class="button size-2 style-2" href="#">
                                                         <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-1.png" alt=""></span>
+                                                            <span class="icon"><img src="" alt=""></span>
                                                             <span class="text">Learn More</span>
                                                         </span>
                                                     </a>
                                                     <a class="button size-2 style-3" href="#">
                                                         <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-3.png" alt=""></span>
+                                                            <span class="icon"><img src="" alt=""></span>
                                                             <span class="text">Add To Cart</span>
                                                         </span>
                                                     </a>
@@ -1006,18 +1006,18 @@
                                             <div class="h6 animate-to-green"><a href="#">Smartphone vibe x2</a></div>
                                         </div>
                                         <div class="preview">
-                                            <img src="img/product-25.jpg" alt="" />
+                                            <img src="" alt="" />
                                             <div class="preview-buttons valign-middle">
                                                 <div class="valign-middle-content">
                                                     <a class="button size-2 style-2" href="#">
                                                         <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-1.png" alt=""></span>
+                                                            <span class="icon"><img src="" alt=""></span>
                                                             <span class="text">Learn More</span>
                                                         </span>
                                                     </a>
                                                     <a class="button size-2 style-3" href="#">
                                                         <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-3.png" alt=""></span>
+                                                            <span class="icon"><img src="" alt=""></span>
                                                             <span class="text">Add To Cart</span>
                                                         </span>
                                                     </a>
@@ -1049,18 +1049,18 @@
                                             <div class="h6 animate-to-green"><a href="#">Smartphone vibe x2</a></div>
                                         </div>
                                         <div class="preview">
-                                            <img src="img/product-26.jpg" alt="" />
+                                            <img src="" alt="" />
                                             <div class="preview-buttons valign-middle">
                                                 <div class="valign-middle-content">
                                                     <a class="button size-2 style-2" href="#">
                                                         <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-1.png" alt=""></span>
+                                                            <span class="icon"><img src="" alt=""></span>
                                                             <span class="text">Learn More</span>
                                                         </span>
                                                     </a>
                                                     <a class="button size-2 style-3" href="#">
                                                         <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-3.png" alt=""></span>
+                                                            <span class="icon"><img src="" alt=""></span>
                                                             <span class="text">Add To Cart</span>
                                                         </span>
                                                     </a>
@@ -1091,18 +1091,18 @@
                                             <div class="h6 animate-to-green"><a href="#">Smartphone vibe x2</a></div>
                                         </div>
                                         <div class="preview">
-                                            <img src="img/product-25.jpg" alt="" />
+                                            <img src="" alt="" />
                                             <div class="preview-buttons valign-middle">
                                                 <div class="valign-middle-content">
                                                     <a class="button size-2 style-2" href="#">
                                                         <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-1.png" alt=""></span>
+                                                            <span class="icon"><img src="" alt=""></span>
                                                             <span class="text">Learn More</span>
                                                         </span>
                                                     </a>
                                                     <a class="button size-2 style-3" href="#">
                                                         <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-3.png" alt=""></span>
+                                                            <span class="icon"><img src="" alt=""></span>
                                                             <span class="text">Add To Cart</span>
                                                         </span>
                                                     </a>
@@ -1134,18 +1134,18 @@
                                             <div class="h6 animate-to-green"><a href="#">Smartphone vibe x2</a></div>
                                         </div>
                                         <div class="preview">
-                                            <img src="img/product-27.jpg" alt="" />
+                                            <img src="" alt="" />
                                             <div class="preview-buttons valign-middle">
                                                 <div class="valign-middle-content">
                                                     <a class="button size-2 style-2" href="#">
                                                         <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-1.png" alt=""></span>
+                                                            <span class="icon"><img src="" alt=""></span>
                                                             <span class="text">Learn More</span>
                                                         </span>
                                                     </a>
                                                     <a class="button size-2 style-3" href="#">
                                                         <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-3.png" alt=""></span>
+                                                            <span class="icon"><img src="" alt=""></span>
                                                             <span class="text">Add To Cart</span>
                                                         </span>
                                                     </a>
@@ -1177,18 +1177,18 @@
                                             <div class="h6 animate-to-green"><a href="#">Smartphone vibe x2</a></div>
                                         </div>
                                         <div class="preview">
-                                            <img src="img/product-26.jpg" alt="" />
+                                            <img src="" alt="" />
                                             <div class="preview-buttons valign-middle">
                                                 <div class="valign-middle-content">
                                                     <a class="button size-2 style-2" href="#">
                                                         <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-1.png" alt=""></span>
+                                                            <span class="icon"><img src="" alt=""></span>
                                                             <span class="text">Learn More</span>
                                                         </span>
                                                     </a>
                                                     <a class="button size-2 style-3" href="#">
                                                         <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-3.png" alt=""></span>
+                                                            <span class="icon"><img src="" alt=""></span>
                                                             <span class="text">Add To Cart</span>
                                                         </span>
                                                     </a>
@@ -1238,7 +1238,7 @@
                                     <div class="swiper-slide">
                                         <div class="banner-shortcode style-2">
                                             <div class="content">
-                                                <div class="background" style="background-image: url(img/thumbnail-11.jpg);"></div>
+                                                <div class="background" style="background-image: url('');"></div>
                                                 <div class="description valign-middle">
                                                     <div class="valign-middle-content">
                                                         <div class="simple-article size-1 color"><a href="#">GADGETS</a></div>
@@ -1252,7 +1252,7 @@
                                     <div class="swiper-slide">
                                         <div class="banner-shortcode style-2">
                                             <div class="content">
-                                                <div class="background" style="background-image: url(img/thumbnail-11.jpg);"></div>
+                                                <div class="background" style="background-image: url('');"></div>
                                                 <div class="description valign-middle">
                                                     <div class="valign-middle-content">
                                                         <div class="simple-article size-1 color"><a href="#">GADGETS</a></div>
@@ -1266,7 +1266,7 @@
                                     <div class="swiper-slide">
                                         <div class="banner-shortcode style-2">
                                             <div class="content">
-                                                <div class="background" style="background-image: url(img/thumbnail-11.jpg);"></div>
+                                                <div class="background" style="background-image: url('');"></div>
                                                 <div class="description valign-middle">
                                                     <div class="valign-middle-content">
                                                         <div class="simple-article size-1 color"><a href="#">GADGETS</a></div>
@@ -1280,7 +1280,7 @@
                                     <div class="swiper-slide">
                                         <div class="banner-shortcode style-2">
                                             <div class="content">
-                                                <div class="background" style="background-image: url(img/thumbnail-11.jpg);"></div>
+                                                <div class="background" style="background-image: url('');"></div>
                                                 <div class="description valign-middle">
                                                     <div class="valign-middle-content">
                                                         <div class="simple-article size-1 color"><a href="#">GADGETS</a></div>
@@ -1300,7 +1300,7 @@
                         <div class="col-sm-6 col-md-12">
                             <div class="h4 col-xs-b25">most viewed</div>
                             <div class="product-shortcode style-4 clearfix">
-                                <a class="preview" href="#"><img src="img/product-28.jpg" alt="" /></a>
+                                <a class="preview" href="#"><img src="" alt="" /></a>
                                 <div class="description">
                                     <div class="simple-article color size-1 col-xs-b5"><a href="#">WIRELESS</a></div>
                                     <h6 class="h6 col-xs-b10"><a href="#">wireless headphones</a></h6>
@@ -1309,7 +1309,7 @@
                             </div>
                             <div class="col-xs-b10"></div>
                             <div class="product-shortcode style-4 clearfix">
-                                <a class="preview" href="#"><img src="img/product-29.jpg" alt="" /></a>
+                                <a class="preview" href="#"><img src="" alt="" /></a>
                                 <div class="description">
                                     <div class="simple-article color size-1 col-xs-b5"><a href="#">CASES</a></div>
                                     <h6 class="h6 col-xs-b10"><a href="#">earphones case</a></h6>
@@ -1318,7 +1318,7 @@
                             </div>
                             <div class="col-xs-b10"></div>
                             <div class="product-shortcode style-4 clearfix">
-                                <a class="preview" href="#"><img src="img/product-30.jpg" alt="" /></a>
+                                <a class="preview" href="#"><img src="" alt="" /></a>
                                 <div class="description">
                                     <div class="simple-article color size-1 col-xs-b5"><a href="#">CASES</a></div>
                                     <h6 class="h6 col-xs-b10"><a href="#">headphones case</a></h6>
@@ -1344,18 +1344,18 @@
                                                 <div class="h6 animate-to-green"><a href="#">high-end spectre x360</a></div>
                                             </div>
                                             <div class="preview">
-                                                <img src="img/product-26.jpg" alt="">
+                                                <img src="" alt="">
                                                 <div class="preview-buttons valign-middle">
                                                     <div class="valign-middle-content">
                                                         <a class="button size-2 style-2" href="#">
                                                             <span class="button-wrapper">
-                                                                <span class="icon"><img src="img/icon-1.png" alt=""></span>
+                                                                <span class="icon"><img src="" alt=""></span>
                                                                 <span class="text">Learn More</span>
                                                             </span>
                                                         </a>
                                                         <a class="button size-2 style-3" href="#">
                                                             <span class="button-wrapper">
-                                                                <span class="icon"><img src="img/icon-3.png" alt=""></span>
+                                                                <span class="icon"><img src="" alt=""></span>
                                                                 <span class="text">Add To Cart</span>
                                                             </span>
                                                         </a>
@@ -1383,18 +1383,18 @@
                                                 <div class="h6 animate-to-green"><a href="#">high-end spectre x360</a></div>
                                             </div>
                                             <div class="preview">
-                                                <img src="img/product-27.jpg" alt="">
+                                                <img src="" alt="">
                                                 <div class="preview-buttons valign-middle">
                                                     <div class="valign-middle-content">
                                                         <a class="button size-2 style-2" href="#">
                                                             <span class="button-wrapper">
-                                                                <span class="icon"><img src="img/icon-1.png" alt=""></span>
+                                                                <span class="icon"><img src="" alt=""></span>
                                                                 <span class="text">Learn More</span>
                                                             </span>
                                                         </a>
                                                         <a class="button size-2 style-3" href="#">
                                                             <span class="button-wrapper">
-                                                                <span class="icon"><img src="img/icon-3.png" alt=""></span>
+                                                                <span class="icon"><img src="" alt=""></span>
                                                                 <span class="text">Add To Cart</span>
                                                             </span>
                                                         </a>
@@ -1422,18 +1422,18 @@
                                                 <div class="h6 animate-to-green"><a href="#">high-end spectre x360</a></div>
                                             </div>
                                             <div class="preview">
-                                                <img src="img/product-26.jpg" alt="">
+                                                <img src="" alt="">
                                                 <div class="preview-buttons valign-middle">
                                                     <div class="valign-middle-content">
                                                         <a class="button size-2 style-2" href="#">
                                                             <span class="button-wrapper">
-                                                                <span class="icon"><img src="img/icon-1.png" alt=""></span>
+                                                                <span class="icon"><img src="" alt=""></span>
                                                                 <span class="text">Learn More</span>
                                                             </span>
                                                         </a>
                                                         <a class="button size-2 style-3" href="#">
                                                             <span class="button-wrapper">
-                                                                <span class="icon"><img src="img/icon-3.png" alt=""></span>
+                                                                <span class="icon"><img src="" alt=""></span>
                                                                 <span class="text">Add To Cart</span>
                                                             </span>
                                                         </a>
@@ -1461,18 +1461,18 @@
                                                 <div class="h6 animate-to-green"><a href="#">high-end spectre x360</a></div>
                                             </div>
                                             <div class="preview">
-                                                <img src="img/product-25.jpg" alt="">
+                                                <img src="" alt="">
                                                 <div class="preview-buttons valign-middle">
                                                     <div class="valign-middle-content">
                                                         <a class="button size-2 style-2" href="#">
                                                             <span class="button-wrapper">
-                                                                <span class="icon"><img src="img/icon-1.png" alt=""></span>
+                                                                <span class="icon"><img src="" alt=""></span>
                                                                 <span class="text">Learn More</span>
                                                             </span>
                                                         </a>
                                                         <a class="button size-2 style-3" href="#">
                                                             <span class="button-wrapper">
-                                                                <span class="icon"><img src="img/icon-3.png" alt=""></span>
+                                                                <span class="icon"><img src="" alt=""></span>
                                                                 <span class="text">Add To Cart</span>
                                                             </span>
                                                         </a>
@@ -1503,7 +1503,7 @@
                             <div class="h4 col-xs-b25">latest post</div>
                             <div class="row m5 text-center">
                                 <div class="blog-shortcode style-1">
-                                    <a href="#" class="preview simple-mouseover"><img src="img/thumbnail-12.jpg" alt="" /></a>
+                                    <a href="#" class="preview simple-mouseover"><img src="" alt="" /></a>
                                     <div class="description">
                                         <div class="simple-article size-1 grey col-xs-b5">APR 07 / 15 &nbsp;&nbsp;&nbsp;<a href="#" class="color">GADGETS</a></div>
                                         <h6 class="h6 col-xs-b10"><a href="#">Phasellus rhoncus in</a></h6>
@@ -1512,7 +1512,7 @@
                                 </div>
                                 
                                 <div class="blog-shortcode style-1">
-                                    <a href="#" class="preview simple-mouseover"><img src="img/thumbnail-13.jpg" alt="" /></a>
+                                    <a href="#" class="preview simple-mouseover"><img src="" alt="" /></a>
                                     <div class="description">
                                         <div class="simple-article size-1 grey col-xs-b5">APR 07 / 15 &nbsp;&nbsp;&nbsp;<a href="#" class="color">GADGETS</a></div>
                                         <h6 class="h6 col-xs-b10"><a href="#">Phasellus rhoncus in</a></h6>

@@ -10,6 +10,7 @@ use App\Cart;
 use App\Order;
 use Auth;
 use App\Http\Requests;
+use Illuminate\Support\Facades\Response;
 use Session;
 class ProductController extends Controller
 {
@@ -26,18 +27,20 @@ class ProductController extends Controller
         return view('index',['categories' => $categories,'products' => $products]);
     }
     function getDetailProduct($id){
-        $product = Product::find($id);
+        $product = Product::findBySlug($id);
         return view('product.detail',['product' => $product]);
     }
     function getAddToCart(Request $request, $id){
+        //$id = intval($id);
     	$product = Product::find($id);
     	$oldCart = Session::has('cart') ? Session::get('cart') : null;
     	$cart = new Cart($oldCart);
     	$cart->add($product,$product->id);
 
     	$request->session()->put('cart',$cart);
-    	//dd(Session::get('cart'));
-    	return redirect()->route('main');
+    	// //dd(Session::get('cart'));
+    	// return redirect()->route('main');
+        return Response::json($cart->totalQty);
     }
     function shoppingCart(){
     	if(!Session::has('cart')){

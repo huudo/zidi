@@ -353,5 +353,27 @@ $(function() {
 	$('.checkbox-toggle-title input').on('change', function(){
 		$('.checkbox-toggle-wrapper').slideToggle();
 	});
-
+	var text;
+});
+$(".add-to-card").on('click', function(e) {
+    // prevent the default action, in this case the following of a link
+    
+    e.preventDefault();
+    // capture the href attribute of the a element
+    var url = $(this).attr('data-href');
+    console.log(url);
+    $.ajax({
+        type: "GET",
+        url: '/add-to-cart/1',
+        success: function( msg ) {
+            console.log(JSON.stringify(msg));
+            if($('header').hasClass('scrolled')){
+            	$('header').removeClass('scrolled');
+            }
+            $('.cart-label').html(msg);
+        },
+        error: function (data) {
+            console.log('Error:', data);
+        }
+    });
 });

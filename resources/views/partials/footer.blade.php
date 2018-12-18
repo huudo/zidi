@@ -4,7 +4,7 @@
         <div class="footer-top">
             <div class="row">
                 <div class="col-sm-6 col-md-3 col-xs-b30 col-md-b0">
-                    <img src="img/logo-1.png" alt="" />
+                    <img src="#" alt="" />
                     <div class="empty-space col-xs-b20"></div>
                     <div class="simple-article size-2 light fulltransparent">Integer posuere orci sit amet feugiat pellent que. Suspendisse vel tempor justo, sit amet posuere orci dapibus auctor</div>
                     <div class="empty-space col-xs-b20"></div>
@@ -43,21 +43,21 @@
                     <h6 class="h6 light">some posts</h6>
                     <div class="empty-space col-xs-b20"></div>
                     <div class="footer-post-preview clearfix">
-                        <a class="image" href="#"><img src="img/thumbnail-1.jpg" alt="" /></a>
+                        <a class="image" href="#"><img src="#" alt="" /></a>
                         <div class="description">
                             <div class="date">apr 07 / 15</div>
                             <a class="title">Fusce tincidunt accumsan pretium sit amet</a>
                         </div>
                     </div>
                     <div class="footer-post-preview clearfix">
-                        <a class="image" href="#"><img src="img/thumbnail-2.jpg" alt="" /></a>
+                        <a class="image" href="#"><img src="#" alt="" /></a>
                         <div class="description">
                             <div class="date">apr 07 / 15</div>
                             <a class="title">Fusce tincidunt accumsan pretium sit amet</a>
                         </div>
                     </div>
                     <div class="footer-post-preview clearfix">
-                        <a class="image" href="#"><img src="img/thumbnail-3.jpg" alt="" /></a>
+                        <a class="image" href="#"><img src="#" alt="" /></a>
                         <div class="description">
                             <div class="date">apr 07 / 15</div>
                             <a class="title">Fusce tincidunt accumsan pretium sit amet</a>
@@ -98,12 +98,12 @@
                 </div>
                 <div class="col-lg-4 col-xs-text-center col-lg-text-right">
                     <div class="footer-payment-icons">
-                        <a class="entry"><img src="img/thumbnail-4.jpg" alt="" /></a>
-                        <a class="entry"><img src="img/thumbnail-5.jpg" alt="" /></a>
-                        <a class="entry"><img src="img/thumbnail-6.jpg" alt="" /></a>
-                        <a class="entry"><img src="img/thumbnail-7.jpg" alt="" /></a>
-                        <a class="entry"><img src="img/thumbnail-8.jpg" alt="" /></a>
-                        <a class="entry"><img src="img/thumbnail-9.jpg" alt="" /></a>
+                        <a class="entry"><img src="#" alt="" /></a>
+                        <a class="entry"><img src="#" alt="" /></a>
+                        <a class="entry"><img src="#" alt="" /></a>
+                        <a class="entry"><img src="#" alt="" /></a>
+                        <a class="entry"><img src="#" alt="" /></a>
+                        <a class="entry"><img src="#" alt="" /></a>
                     </div>
                 </div>
             </div>
@@ -134,7 +134,7 @@
                     <div class="col-sm-6 text-right">
                         <a class="button size-2 style-3" href="#">
                             <span class="button-wrapper">
-                                <span class="icon"><img src="img/icon-4.png" alt="" /></span>
+                                <span class="icon"><img src="#" alt="" /></span>
                                 <span class="text">submit</span>
                             </span>
                         </a>  
@@ -147,7 +147,7 @@
                     <div class="col-sm-4 col-xs-b10 col-sm-b0">
                         <a class="button facebook-button size-2 style-4 block" href="#">
                             <span class="button-wrapper">
-                                <span class="icon"><img src="img/icon-4.png" alt="" /></span>
+                                <span class="icon"><img src="#" alt="" /></span>
                                 <span class="text">facebook</span>
                             </span>
                         </a>
@@ -155,7 +155,7 @@
                     <div class="col-sm-4 col-xs-b10 col-sm-b0">
                         <a class="button twitter-button size-2 style-4 block" href="#">
                             <span class="button-wrapper">
-                                <span class="icon"><img src="img/icon-4.png" alt="" /></span>
+                                <span class="icon"><img src="#" alt="" /></span>
                                 <span class="text">twitter</span>
                             </span>
                         </a>
@@ -163,7 +163,7 @@
                     <div class="col-sm-4">
                         <a class="button google-button size-2 style-4 block" href="#">
                             <span class="button-wrapper">
-                                <span class="icon"><img src="img/icon-4.png" alt="" /></span>
+                                <span class="icon"><img src="#" alt="" /></span>
                                 <span class="text">google+</span>
                             </span>
                         </a>
@@ -198,7 +198,7 @@
                     <div class="col-sm-5 text-right">
                         <a class="button size-2 style-3" href="#">
                             <span class="button-wrapper">
-                                <span class="icon"><img src="img/icon-4.png" alt="" /></span>
+                                <span class="icon"><img src="#" alt="" /></span>
                                 <span class="text">submit</span>
                             </span>
                         </a>  
@@ -211,7 +211,7 @@
                     <div class="col-sm-4 col-xs-b10 col-sm-b0">
                         <a class="button facebook-button size-2 style-4 block" href="#">
                             <span class="button-wrapper">
-                                <span class="icon"><img src="img/icon-4.png" alt="" /></span>
+                                <span class="icon"><img src="#" alt="" /></span>
                                 <span class="text">facebook</span>
                             </span>
                         </a>
@@ -219,7 +219,7 @@
                     <div class="col-sm-4 col-xs-b10 col-sm-b0">
                         <a class="button twitter-button size-2 style-4 block" href="#">
                             <span class="button-wrapper">
-                                <span class="icon"><img src="img/icon-4.png" alt="" /></span>
+                                <span class="icon"><img src="#" alt="" /></span>
                                 <span class="text">twitter</span>
                             </span>
                         </a>
@@ -227,7 +227,7 @@
                     <div class="col-sm-4">
                         <a class="button google-button size-2 style-4 block" href="#">
                             <span class="button-wrapper">
-                                <span class="icon"><img src="img/icon-4.png" alt="" /></span>
+                                <span class="icon"><img src="#" alt="" /></span>
                                 <span class="text">google+</span>
                             </span>
                         </a>
@@ -252,31 +252,31 @@
                                <div class="swiper-wrapper">
                                    <div class="swiper-slide">
                                         <div class="swiper-lazy-preloader"></div>
-                                        <div class="product-big-preview-entry swiper-lazy" data-background="img/product-preview-4.jpg"></div>
+                                        <div class="product-big-preview-entry swiper-lazy" data-background=""></div>
                                    </div>
                                    <div class="swiper-slide">
                                         <div class="swiper-lazy-preloader"></div>
-                                        <div class="product-big-preview-entry swiper-lazy" data-background="img/product-preview-5.jpg"></div>
+                                        <div class="product-big-preview-entry swiper-lazy" data-background=""></div>
                                    </div>
                                    <div class="swiper-slide">
                                         <div class="swiper-lazy-preloader"></div>
-                                        <div class="product-big-preview-entry swiper-lazy" data-background="img/product-preview-6.jpg"></div>
+                                        <div class="product-big-preview-entry swiper-lazy" data-background=""></div>
                                    </div>
                                    <div class="swiper-slide">
                                         <div class="swiper-lazy-preloader"></div>
-                                        <div class="product-big-preview-entry swiper-lazy" data-background="img/product-preview-7.jpg"></div>
+                                        <div class="product-big-preview-entry swiper-lazy" data-background=""></div>
                                    </div>
                                    <div class="swiper-slide">
                                         <div class="swiper-lazy-preloader"></div>
-                                        <div class="product-big-preview-entry swiper-lazy" data-background="img/product-preview-8.jpg"></div>
+                                        <div class="product-big-preview-entry swiper-lazy" data-background=""></div>
                                    </div>
                                    <div class="swiper-slide">
                                         <div class="swiper-lazy-preloader"></div>
-                                        <div class="product-big-preview-entry swiper-lazy" data-background="img/product-preview-9.jpg"></div>
+                                        <div class="product-big-preview-entry swiper-lazy" data-background=""></div>
                                    </div>
                                    <div class="swiper-slide">
                                         <div class="swiper-lazy-preloader"></div>
-                                        <div class="product-big-preview-entry swiper-lazy" data-background="img/product-preview-10.jpg"></div>
+                                        <div class="product-big-preview-entry swiper-lazy" data-background=""></div>
                                    </div>
                                </div>
                             </div>
@@ -289,37 +289,37 @@
                                <div class="swiper-wrapper">
                                    <div class="swiper-slide">
                                         <div class="product-small-preview-entry">
-                                            <img src="img/product-preview-4_.jpg" alt="" />
+                                            <img src="" alt="" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="product-small-preview-entry">
-                                            <img src="img/product-preview-5_.jpg" alt="" />
+                                            <img src="#" alt="" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="product-small-preview-entry">
-                                            <img src="img/product-preview-6_.jpg" alt="" />
+                                            <img src="#" alt="" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="product-small-preview-entry">
-                                            <img src="img/product-preview-7_.jpg" alt="" />
+                                            <img src="#" alt="" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="product-small-preview-entry">
-                                            <img src="img/product-preview-8_.jpg" alt="" />
+                                            <img src="#" alt="" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="product-small-preview-entry">
-                                            <img src="img/product-preview-9_.jpg" alt="" />
+                                            <img src="#" alt="" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="product-small-preview-entry">
-                                            <img src="img/product-preview-10_.jpg" alt="" />
+                                            <img src="#" alt="" />
                                         </div>
                                    </div>
 
@@ -402,7 +402,7 @@
                             <div class="col-sm-6 col-xs-b10 col-sm-b0">
                                 <a class="button size-2 style-2 block" href="#">
                                     <span class="button-wrapper">
-                                        <span class="icon"><img src="img/icon-2.png" alt=""></span>
+                                        <span class="icon"><img src="#" alt=""></span>
                                         <span class="text">add to cart</span>
                                     </span>
                                 </a>
