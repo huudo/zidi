@@ -13,7 +13,7 @@ class OrderTableSeeder extends Seeder
      */
     public function run()
     {
-    	Order::destroy(2);
+    	//Order::destroy(2);
 
         // $product1 = Product::where('id',1)->first();
         // $product2 = Product::where('id',2)->first();

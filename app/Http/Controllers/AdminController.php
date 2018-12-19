@@ -74,4 +74,14 @@ class AdminController extends Controller
         $product->delete();
         return redirect()->back();
     }
+
+    public function getMerchandise(){
+        return view('admin.merchandise');
+    }
+    public function getMerchandiseCreate(){
+        return view('admin.merchandiseCreate');
+    }
+    public function getShipment(){
+        return view('admin.shipment');
+    }
 }

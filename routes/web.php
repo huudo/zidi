@@ -71,6 +71,10 @@ Route::get('/checkout',[
 	'uses' => 'ProductController@getCheckout',
 	'as' =>'product.checkout'
 ]);
+Route::get('/search/name',[
+	'uses' => 'ProductController@getSearchName',
+	'as' => 'product.searchName'
+]);
 // Route::get('/admin',[
 // 	'uses' => 'AdminController@getAdminPage',
 // 	'as' => 'admin'
@@ -111,5 +115,17 @@ Route::prefix('admin')->group(function () {
 	Route::get('product/{id}/delete',[
 		'uses' => 'AdminController@getDeleteProduct',
 		'as' => 'admin.deleteProduct'
+	]);
+	Route::get('merchandise',[
+		'uses' => 'AdminController@getMerchandise',
+		'as' => 'admin.merchandise'
+	]);
+	Route::get('merchandise/create',[
+		'uses' => 'AdminController@getMerchandiseCreate',
+		'as' => 'admin.merchandiseCreate'
+	]);
+	Route::get('shipment',[
+		'uses' => 'AdminController@getShipment',
+		'as' => 'admin.shipment'
 	]);
 });

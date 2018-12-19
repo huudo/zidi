@@ -34,7 +34,7 @@
                                             </a>
                                             <a class="button size-2 style-3" href="#">
                                                 <span class="button-wrapper">
-                                                    <span class="icon"><img src="#" alt=""></span>
+                                                    <span class="icon"><i class="fa fa-cart-plus"></i></span>
                                                     <span class="text">Add To Cart</span>
                                                 </span>
                                             </a>
@@ -110,9 +110,9 @@
                                                             <span class="text">Learn More</span>
                                                         </span>
                                                     </a>
-                                                    <a class="button size-2 style-3 add-to-card" href="#" data-href = "/add-to-card/{{$product->id}}">
+                                                    <a class="button size-2 style-3 add-to-card" href="#" data-href = "/add-to-cart/{{$product->id}}">
                                                         <span class="button-wrapper">
-                                                            <span class="icon"><img src="#" alt=""></span>
+                                                            <span class="icon"><i class="fa fa-cart-plus"></i></span>
                                                             <span class="text">Add To Cart</span>
                                                         </span>
                                                     </a>
@@ -157,7 +157,7 @@
                                                     </a>
                                                     <a class="button size-2 style-3" href="#">
                                                         <span class="button-wrapper">
-                                                            <span class="icon"><img src="#" alt=""></span>
+                                                            <span class="icon"><i class="fa fa-cart-plus"></i></span>
                                                             <span class="text">Add To Cart</span>
                                                         </span>
                                                     </a>
@@ -195,7 +195,7 @@
                                                     </a>
                                                     <a class="button size-2 style-3" href="#">
                                                         <span class="button-wrapper">
-                                                            <span class="icon"><img src="#" alt=""></span>
+                                                            <span class="icon"><i class="fa fa-cart-plus"></i></span>
                                                             <span class="text">Add To Cart</span>
                                                         </span>
                                                     </a>
@@ -233,7 +233,7 @@
                                                     </a>
                                                     <a class="button size-2 style-3" href="#">
                                                         <span class="button-wrapper">
-                                                            <span class="icon"><img src="#" alt=""></span>
+                                                            <span class="icon"><i class="fa fa-cart-plus"></i></span>
                                                             <span class="text">Add To Cart</span>
                                                         </span>
                                                     </a>

@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css"> -->
+    <script src="{{ asset('public/admin/js/jquery-3.3.1.min.js')}}"></script>
+    <script src="{{ asset('public/admin/js/bootstrap.bundle.js')}}"></script>
+    <script src="{{ asset('public/admin/js/main-js.js')}}"></script>
+    <script src="{{ asset('public/js/typeahead.bundle.min.js')}}"></script>
     <title>Zidi Admin</title>
 </head>
 <?php 
@@ -179,29 +183,14 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fa fa-fw fa-rocket"></i>Danh mục</a>
+                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fa fa-fw fa-rocket"></i>Quản lý đơn hàng</a>
                             <div id="submenu-2" class="collapse submenu" style="">
-                                <ul class="nav flex-column">
+                                <ul class="nav flex-column">                                    
                                     <li class="nav-item">
-                                        <a class="nav-link" href="pages/cards.html">Cards <span class="badge badge-secondary">New</span></a>
+                                        <a class="nav-link" href="{{route('admin.shipment')}}">Xuất hàng</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="pages/general.html">General</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/carousel.html">Carousel</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/listgroup.html">List Group</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/typography.html">Typography</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/accordions.html">Accordions</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="pages/tabs.html">Tabs</a>
+                                        <a class="nav-link" href="{{route('admin.merchandise')}}">Nhập hàng <span class="badge badge-secondary">New</span></a>
                                     </li>
                                 </ul>
                             </div>
@@ -436,7 +425,6 @@
     </div>
     
 </div>
-<script src="{{ asset('public/admin/js/jquery-3.3.1.min.js')}}"></script>
-<script src="{{ asset('public/admin/js/bootstrap.bundle.js')}}"></script>
-<script src="{{ asset('public/admin/js/main-js.js')}}"></script>
+
+
 </body>

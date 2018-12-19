@@ -7,7 +7,13 @@
                     <div class="entry"><b>email:</b> <a href="mailto:huudt.dev@gmail.com">huudt.dev@gmail.com</a></div>
                 </div>
                 <div class="col-md-7 col-md-text-right">
-                    <div class="entry"><a class="open-popup " data-toggle="modal" data-target="#myModalLogin" data-rel="1"><b>Đăng nhập</b></a>&nbsp; or &nbsp;<a class="open-popup" data-rel="2"><b>Đăng ký</b></a></div>
+                    @if(!Auth::check())
+                    <div class="entry"><a class="open-popup " data-toggle="modal" data-target="#myModalLogin" data-rel="1">
+                        <b>Đăng nhập</b></a>&nbsp; or &nbsp;<a class="open-popup" data-rel="2"><b>Đăng ký</b></a>
+                    </div>
+                    @else
+                    <b>{{Auth::user()->firstname}}</b>
+                    @endif
                     <div class="entry hidden-xs hidden-sm"><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
                     <div class="entry hidden-xs hidden-sm cart">
                         <a href="{{route('product.shoppingCart')}}">
@@ -25,7 +31,7 @@
                         <span></span>
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>
     </div>
     <div class="header-bottom">

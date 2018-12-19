@@ -22,5 +22,7 @@ class Product extends Model
     function sub_categories(){
     	return $this->belongsTo('App\SubCategory','subcategory_id');
     }
-
+    function orderDetail(){
+    	return $this->belongsTo('App\DetailOrder','id_product');
+    }
 }

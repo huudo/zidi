@@ -8,6 +8,7 @@ use App\Category;
 use App\Product;
 use App\Cart;
 use App\Order;
+use App\DetailOrder;
 use Auth;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Response;
@@ -67,15 +68,32 @@ class ProductController extends Controller
     function getCheckout(){
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
-
+        $items = $cart->items;
+        
         $order = new Order();
         $order->cart = serialize($cart);
         $order->status = 'pending';
         $order->payment = 'handle';
-
         Auth::user()->orders()->save($order);
+
+        // Lưu lại chi tiết order để tính nhập xuất hàng cho từng sản phẩm
+        foreach ($items as $key => $item) {
+            $detailOrder = new DetailOrder();
+            $detailOrder->qty = $item['qty'];
+            $detailOrder->price = $item['price'];
+            $product = $item['item'];
+            $detailOrder->title = $product['title'];
+            $detailOrder->orders()->associate($order);
+            $detailOrder->product()->associate($product);
+            $detailOrder->save();               
+        }
+        
         Session::forget('cart');
         return redirect()->route('main');
+    }
+    function getSearchName(Request $request){
+        $products = Product::where('title', 'like', '%' . $request->value . '%')->get();
+        return response()->json($products); 
     }
 }
 

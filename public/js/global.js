@@ -364,9 +364,9 @@ $(".add-to-card").on('click', function(e) {
     console.log(url);
     $.ajax({
         type: "GET",
-        url: '/add-to-cart/1',
+        url: url,
         success: function( msg ) {
-            console.log(JSON.stringify(msg));
+           // console.log(JSON.stringify(msg));
             if($('header').hasClass('scrolled')){
             	$('header').removeClass('scrolled');
             }
