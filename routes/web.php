@@ -124,6 +124,14 @@ Route::prefix('admin')->group(function () {
 		'uses' => 'AdminController@getMerchandiseCreate',
 		'as' => 'admin.merchandiseCreate'
 	]);
+	Route::post('merchandise/create',[
+		'uses' => 'AdminController@postMerchandiseCreate',
+		'as' => 'admin.merchandiseCreate'
+	]);
+	Route::get('addElementProduct',[
+		'uses' => 'AdminController@addElementProduct',
+		'as' => 'admin.addElementProduct'
+	]);
 	Route::get('shipment',[
 		'uses' => 'AdminController@getShipment',
 		'as' => 'admin.shipment'

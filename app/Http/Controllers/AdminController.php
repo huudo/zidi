@@ -81,7 +81,22 @@ class AdminController extends Controller
     public function getMerchandiseCreate(){
         return view('admin.merchandiseCreate');
     }
+    public function postMerchandiseCreate(Request $request){
+        $input = $request->input('product');
+        foreach ($input as $key => $product) {
+            dd($product['price']);
+        }
+    }
+    public function addElementProduct(Request $request){
+
+        $id = $request->input('id');
+        $product = Product::find($id);
+        $returnHTML = view('admin.elementProduct')->with('product', $product)->render();
+        return response()->json(array('success' => true, 'html'=>$returnHTML));
+
+    }
     public function getShipment(){
         return view('admin.shipment');
     }
+
 }

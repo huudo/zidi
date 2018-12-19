@@ -7013,3 +7013,6 @@ Media Query
     }
 }
 
+.add-product-item{
+    cursor: pointer;
+}

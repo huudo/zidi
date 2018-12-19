@@ -18,6 +18,32 @@
         	</div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="list-product-group">
+                <form action="" method="POST">
+                    <table class="list-product" style="width: 100%">
+                        <tr>
+                            <th>
+                                <p>Mã SP</p>
+                            </th>
+                            <th>
+                                <p>Tên Sản phẩm</p>
+                            </th>
+                            <th>
+                                <p>Giá</p>
+                            </th>
+                            <th>
+                                <p>Số lượng</p>
+                            </th>
+                        </tr>
+                    </table>
+                    {{csrf_field()}}
+                    <button type="submit" class="btn btn-primary">Tạo đơn</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 
 
@@ -51,7 +77,7 @@ $(document).ready(function() {
                     '<div class="list-group search-results-dropdown"></div>'
                 ],
                 suggestion: function (data) {
-                    return '<span class="list-group-item add-product" onclick="return (addProduct('+data.id+') )">' + data.title + '</span>';
+                    return '<span class="list-group-item add-product-item" onclick="return (addProduct('+data.id+') )">' + data.title + '</span>';
                 }
             }
         }
@@ -60,7 +86,28 @@ $(document).ready(function() {
 </script>
 <script type="text/javascript">
 	function addProduct(id){
-		
+		if(!id){
+            alert("Lỗi không tồn tại sản phẩm");
+            return false;
+        }
+        $.ajax({
+            url: "{{route('admin.addElementProduct')}}",
+            type: 'GET',
+            cache: false,
+            data: { 'id': id}, 
+            datatype: 'html',
+            beforeSend: function() {
+                //something before send
+            },
+            success: function(data) {
+                if(data.success == true) {
+                  $('.list-product').append(data.html);
+                }
+            },
+            error: function(xhr,textStatus,thrownError) {
+                alert(xhr + "\n" + textStatus + "\n" + thrownError);
+            }
+        });
 	}
 </script>
 @endsection
