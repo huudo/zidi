@@ -22,19 +22,31 @@
         <div class="col-md-12">
             <div class="list-product-group">
                 <form action="" method="POST">
+                    <div style="width: 100%">
+                        <p style="float: right;padding-right: 20px;">
+                            <span><i class="fa fa-dollar-sign"></i> Tổng tiền: </span>
+                            <span class="total-price">0</span>
+                        </p>
+                    </div>
                     <table class="list-product" style="width: 100%">
                         <tr>
-                            <th>
+                            <th style="width: 8%">
                                 <p>Mã SP</p>
                             </th>
-                            <th>
+                            <th style="width: 50%">
                                 <p>Tên Sản phẩm</p>
                             </th>
                             <th>
-                                <p>Giá</p>
+                                <p>Giá nhập</p>
+                            </th>
+                            <th>
+                                <p>Giá bán</p>
                             </th>
                             <th>
                                 <p>Số lượng</p>
+                            </th>
+                            <th>
+                                <p>Thao tác</p>
                             </th>
                         </tr>
                     </table>
@@ -46,9 +58,19 @@
     </div>
 </div>
 
-
+<script type="text/javascript">
+    // Các biến để tính tổng tiền nhập
+    var total = 0;
+    function Product(id,price,pty){
+        this.id = id;
+        this.price = price;
+        this.pty = pty;
+    }
+    var listProduct = [];
+</script>
 <script type="text/javascript">
 $(document).ready(function() {
+
     var engine = new Bloodhound({
         remote: {
             url: '/search/name?value=%QUERY%',
@@ -101,7 +123,18 @@ $(document).ready(function() {
             },
             success: function(data) {
                 if(data.success == true) {
-                  $('.list-product').append(data.html);
+                    var id = data.product['id'];
+                    if(listProduct[id]){
+                        listProduct[id]['pty'] += 1;
+                        var count = parseInt($(".product-pty-"+id).val());
+                        count++;
+                        $('.product-pty-'+id).val(count);
+                    }else{
+                        $('.list-product').append(data.html);
+                        var pro = new Product(id,data.product['price_in'],1);
+                        listProduct[id] = pro;
+                    }
+                    calculatePrice();
                 }
             },
             error: function(xhr,textStatus,thrownError) {
@@ -109,5 +142,14 @@ $(document).ready(function() {
             }
         });
 	}
+    function calculatePrice(){
+        var new_total = 0;
+        listProduct.forEach(function(element) {
+            new_total += element['pty']*element['price'];
+        });
+        total = new_total;
+        $('.total-price').text(total);
+        console.log("TOTAL: ",total);
+    }
 </script>
 @endsection

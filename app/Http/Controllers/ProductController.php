@@ -17,7 +17,7 @@ class ProductController extends Controller
 {
 	public function getIndex()
     {
-        $categories = Category::all();
+        $categories = Category::with('subcategories')->get();
         //$subcategories = SubCategory::all();
         $products = Product::all();
         // $orders = Auth::user()->orders;

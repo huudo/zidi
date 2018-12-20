@@ -21,6 +21,7 @@ class CreateProductsTable extends Migration
             $table->foreign('subcategory_id')->references('id')->on('sub_categories');
             $table->string('title');
             $table->longText('description');
+            $table->integer('price_in');
             $table->integer('price');
             $table->string('slug');
             $table->timestamps();

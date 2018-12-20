@@ -7016,3 +7016,35 @@ Media Query
 .add-product-item{
     cursor: pointer;
 }
+table.list-product{
+    border-left: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+}
+table.list-product th{
+    border: 1px solid #CCC;
+    padding: 10px;
+    text-align: center;
+}
+table.list-product td{
+    padding: 10px;
+    border-bottom: 1px solid #CCC
+}
+table.list-product td{
+    text-align: center;
+}
+table.list-product td.td-title{
+    text-align: left !important;
+}
+table.list-product td input{
+    width: 100px;
+    text-align: center;
+}
+.twitter-typeahead{
+    display: block !important;
+}
+.twitter-typeahead .tt-menu,.twitter-typeahead .tt-menu .add-product-item{
+    width: 100%;
+}
+.twitter-typeahead .tt-menu .add-product-item:hover{
+    background: #ececec
+}

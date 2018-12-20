@@ -92,7 +92,7 @@ class AdminController extends Controller
         $id = $request->input('id');
         $product = Product::find($id);
         $returnHTML = view('admin.elementProduct')->with('product', $product)->render();
-        return response()->json(array('success' => true, 'html'=>$returnHTML));
+        return response()->json(array('success' => true, 'html'=>$returnHTML,'product' => $product));
 
     }
     public function getShipment(){
