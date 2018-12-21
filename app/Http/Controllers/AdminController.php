@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\SubCategory;
 use App\Product;
+use App\Http\Requests\CheckMerchandiseRequest;
 class AdminController extends Controller
 {
 	public function __construct()
@@ -81,7 +82,8 @@ class AdminController extends Controller
     public function getMerchandiseCreate(){
         return view('admin.merchandiseCreate');
     }
-    public function postMerchandiseCreate(Request $request){
+    public function postMerchandiseCreate(CheckMerchandiseRequest $request){
+        $dulieu_tu_input = $request->all();
         $input = $request->input('product');
         foreach ($input as $key => $product) {
             dd($product['price']);

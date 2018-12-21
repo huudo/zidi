@@ -10,7 +10,7 @@
 		</p>
 	</td>
 	<td class="td-price-in">
-		<input type="" name="product[{{$product->id}}][price_in]" value="{{$product->price_in}}">
+		<input type="" name="product[{{$product->id}}][price-in]" value="{{$product->price_in}}">
 	</td>
 	<td class="td-price">
 		<input type="" name="product[{{$product->id}}][price]" value="{{$product->price}}">

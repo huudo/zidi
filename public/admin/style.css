@@ -1945,6 +1945,7 @@ Container / Wrapper
     left: 0;
     margin-left: 264px;
     min-height: 870px !important;
+    background: #fff;
 }
 
 .dashboard-content {
@@ -7019,9 +7020,9 @@ Media Query
 table.list-product{
     border-left: 1px solid #CCC;
     border-right: 1px solid #CCC;
+    margin-bottom: 50px;
 }
 table.list-product th{
-    border: 1px solid #CCC;
     padding: 10px;
     text-align: center;
 }
@@ -7047,4 +7048,22 @@ table.list-product td input{
 }
 .twitter-typeahead .tt-menu .add-product-item:hover{
     background: #ececec
+}
+.total-price{
+    border: none;
+    background: no-repeat;
+    text-align: right;
+    width: 100px;
+}
+.info-shop{
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    padding: 20px;
+}
+.info-shop{
+    text-align: right;
+}
+.info-shop .form-group{
+    text-align: left;
 }

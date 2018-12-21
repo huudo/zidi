@@ -24,12 +24,12 @@
                 <form action="" method="POST">
                     <div style="width: 100%">
                         <p style="float: right;padding-right: 20px;">
-                            <span><i class="fa fa-dollar-sign"></i> Tổng tiền: </span>
-                            <span class="total-price">0</span>
+                            <label><i class="fa fa-dollar-sign"></i> Tổng tiền: </label>
+                            <input class="total-price" name="total-price" disabled value="0">
                         </p>
                     </div>
                     <table class="list-product" style="width: 100%">
-                        <tr>
+                        <tr style="background: #0e0c28;color: #fff;">
                             <th style="width: 8%">
                                 <p>Mã SP</p>
                             </th>
@@ -50,8 +50,32 @@
                             </th>
                         </tr>
                     </table>
-                    {{csrf_field()}}
-                    <button type="submit" class="btn btn-primary">Tạo đơn</button>
+                    <div class="row">
+                        <div class="col-md-6">
+                            
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-shop">
+                                <div class="form-group">
+                                    <label>Nhập hàng của</label>
+                                    <input type="" name="shop-name" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Số điện thoại</label>
+                                    <input type="" name="shop-phone" class="form-control">
+                                </div>
+                                {{csrf_field()}}
+                                <button type="submit" class="btn btn-primary">Nhập hàng</button>
+                            </div> 
+                            @if ( $errors->any() )
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>   
+                            @endif                                                      
+                        </div>
+                    </div>                    
                 </form>
             </div>
         </div>
@@ -148,8 +172,8 @@ $(document).ready(function() {
             new_total += element['pty']*element['price'];
         });
         total = new_total;
-        $('.total-price').text(total);
-        console.log("TOTAL: ",total);
+        $('.total-price').val(total);
+        //console.log("TOTAL: ",total);
     }
 </script>
 @endsection
