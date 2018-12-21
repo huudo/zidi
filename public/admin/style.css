@@ -7013,7 +7013,9 @@ Media Query
         margin: 1.75rem auto;
     }
 }
-
+.list-product-group{
+    margin-top: 30px;
+}
 .add-product-item{
     cursor: pointer;
 }
@@ -7054,6 +7056,10 @@ table.list-product td input{
     background: no-repeat;
     text-align: right;
     width: 100px;
+}
+.td-title input{
+    border: none;
+    background: none;
 }
 .info-shop{
     -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);

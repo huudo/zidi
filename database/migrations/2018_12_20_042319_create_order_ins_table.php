@@ -15,6 +15,11 @@ class CreateOrderInsTable extends Migration
     {
         Schema::create('order_ins', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('total_price');
+            $table->string('shop_name');
+            $table->string('shop_phone');
+            $table->string('status');
+            $table->string('payment');
             $table->timestamps();
         });
     }

@@ -15,10 +15,14 @@ class CreateOrderInDetailsTable extends Migration
     {
         Schema::create('order_in_details', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('id_order')->unsigned();
+            $table->integer('id_product')->unsigned();
+            $table->integer('pty');
+            $table->integer('price');
+            $table->string('title');
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *

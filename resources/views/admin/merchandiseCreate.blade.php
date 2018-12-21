@@ -25,7 +25,7 @@
                     <div style="width: 100%">
                         <p style="float: right;padding-right: 20px;">
                             <label><i class="fa fa-dollar-sign"></i> Tổng tiền: </label>
-                            <input class="total-price" name="total-price" disabled value="0">
+                            <input class="total-price" type="text" name="total-price"  value="0">
                         </p>
                     </div>
                     <table class="list-product" style="width: 100%">
