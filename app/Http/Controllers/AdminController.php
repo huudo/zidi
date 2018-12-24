@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\SubCategory;
 use App\Product;
-use App\OrderIn;
-use App\OrderInDetail;
-
+use App\Order;
+use App\DetailOrder;
+use Auth;
 use App\Http\Requests\CheckMerchandiseRequest;
 class AdminController extends Controller
 {
@@ -86,7 +86,7 @@ class AdminController extends Controller
     }
 
     public function getMerchandise(){
-        $orders = OrderIn::all();
+        $orders = Order::where('type',env('ORDER_IN',''))->get();
         return view('admin.merchandise',['orders' => $orders]);
     }
 
@@ -95,6 +95,7 @@ class AdminController extends Controller
     }
 
     public function postMerchandiseCreate(CheckMerchandiseRequest $request){
+
         $input = $request->all();
         $products = $input['product']; 
         $shop_name = $input['shop-name'];
@@ -102,23 +103,24 @@ class AdminController extends Controller
         $total_price = $input['total-price'];
 
         // Lư order mới
-        $orderIn = new OrderIn();
-        $orderIn->total_price = $total_price;
-        $orderIn->shop_name = $shop_name;
-        $orderIn->shop_phone = $shop_phone;
-        $orderIn->status = 'requesting';
-        $orderIn->payment = 'pending';
-        $orderIn->save();
+        $order = new Order();
+        $order->total_price = $total_price;
+        $order->name = $shop_name;
+        $order->phone = $shop_phone;
+        $order->status = 'requesting';
+        $order->payment = 'pending';
+        $order->type = env('ORDER_IN');
+        Auth::user()->orders()->save($order);
 
         // Lưu chi tiết Order
         foreach ($products as $key => $product) {
             //dd($product['price-in']);
-            $order_detail = new OrderInDetail();
+            $order_detail = new DetailOrder();
             $order_detail->id_product = $key;
-            $order_detail->pty = $product['pty'];
+            $order_detail->qty = $product['pty'];
             $order_detail->price = $product['price-in'];
             $order_detail->title = $product['title'];
-            $order_detail->oderIns()->associate($orderIn);
+            $order_detail->orders()->associate($order);
             $order_detail->save();
         }
         return redirect()->route('admin.merchandise');

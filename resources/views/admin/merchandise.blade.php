@@ -36,10 +36,10 @@
                         {{$order->id}}
                     </td>
                     <td>
-                        {{$order->shop_name}}
+                        {{$order->name}}
                     </td>
                     <td>
-                        {{$order->shop_phone}}
+                        {{$order->phone}}
                     </td>
                     <td>
                         {{$order->created_at->format('d-m-Y')}}

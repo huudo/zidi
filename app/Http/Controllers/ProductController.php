@@ -66,30 +66,32 @@ class ProductController extends Controller
     	return redirect()->route('product.shoppingCart');
     }
     function getCheckout(){
-        $oldCart = Session::get('cart');
-        $cart = new Cart($oldCart);
-        $items = $cart->items;
+        // $oldCart = Session::get('cart');
+        // $cart = new Cart($oldCart);
+        // $items = $cart->items;
         
-        $order = new Order();
-        $order->cart = serialize($cart);
-        $order->status = 'pending';
-        $order->payment = 'handle';
-        Auth::user()->orders()->save($order);
+        // $order = new Order();
+        // $order->total_price = $cart->totalPrice;
+        // $order->name = $shop_name;
+        // $order->phone = $shop_phone;
+        // $order->status = 'pending';
+        // $order->payment = 'handle';
+        // Auth::user()->orders()->save($order);
 
-        // Lưu lại chi tiết order để tính nhập xuất hàng cho từng sản phẩm
-        foreach ($items as $key => $item) {
-            $detailOrder = new DetailOrder();
-            $detailOrder->qty = $item['qty'];
-            $detailOrder->price = $item['price'];
-            $product = $item['item'];
-            $detailOrder->title = $product['title'];
-            $detailOrder->orders()->associate($order);
-            $detailOrder->product()->associate($product);
-            $detailOrder->save();               
-        }
+        // // Lưu lại chi tiết order để tính nhập xuất hàng cho từng sản phẩm
+        // foreach ($items as $key => $item) {
+        //     $detailOrder = new DetailOrder();
+        //     $detailOrder->qty = $item['qty'];
+        //     $detailOrder->price = $item['price'];
+        //     $product = $item['item'];
+        //     $detailOrder->title = $product['title'];
+        //     $detailOrder->orders()->associate($order);
+        //     $detailOrder->product()->associate($product);
+        //     $detailOrder->save();               
+        // }
         
-        Session::forget('cart');
-        return redirect()->route('main');
+        // Session::forget('cart');
+        // return redirect()->route('main');
     }
     function getSearchName(Request $request){
         $products = Product::where('title', 'like', '%' . $request->value . '%')->get();

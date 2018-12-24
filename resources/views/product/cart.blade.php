@@ -97,31 +97,18 @@
     <div class="empty-space col-xs-b35 col-md-b70"></div>
     <div class="row">
         <div class="col-md-6 col-xs-b50 col-md-b0">
-            <h4 class="h4 col-xs-b25">calculate shipping</h4>
-            <select class="SlectBox">
-                <option disabled="disabled" selected="selected">Choose country for shipping</option>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-            </select>
-            <div class="empty-space col-xs-b20"></div>
-            <div class="row m10">
-                <div class="col-sm-6">
-                    <input class="simple-input" type="text" value="" placeholder="State / Country" />
-                    <div class="empty-space col-xs-b20"></div>
-                </div>
-                <div class="col-sm-6">
-                    <input class="simple-input" type="text" value="" placeholder="Postcode / Zip" />
-                    <div class="empty-space col-xs-b20"></div>
-                </div>
+            <h4 class="h4 col-xs-b25">Thông tin khách hàng</h4>
+            <div class="form-group">
+                <label>Họ tên</label>
+                <input type="text" name="name-customer" class="form-control">
             </div>
-            <div class="button size-2 style-2">
-                <span class="button-wrapper">
-                    <span class="icon"><img src="img/icon-1.png" alt=""></span>
-                    <span class="text">update totals</span>
-                </span>
-                <input type="submit"/>
+            <div class="form-group">
+                <label>Địa chỉ nhận hàng</label>
+                <input type="text" name="address" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Số điện thoại</label>
+                <input type="text" name="phone-number" class="form-control">
             </div>
         </div>
         <div class="col-md-6">
