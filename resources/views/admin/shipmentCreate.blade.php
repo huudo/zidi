@@ -5,15 +5,15 @@
 	<div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
         	<div class="page-header">
-                <h2 class="pageheader-title">Nhập đơn hàng mới</h2>
-                <p>Tạo đơn hàng nhập mới</p>
+                <h2 class="pageheader-title">Xuất đơn hàng mới</h2>
+                <p>Tạo đơn hàng xuất mới</p>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
         	<div class="form-group">
-        		<label>Nhập sản phẩm</label>
+        		<label>Nhập têm sản phẩm</label>
         		<input type="text" name=""  class="form-control" id="product-auto-search">
         	</div>
         </div>
@@ -52,20 +52,23 @@
                     </table>
                     <div class="row">
                         <div class="col-md-6">
-                            
                         </div>
                         <div class="col-md-6">
                             <div class="info-shop">
                                 <div class="form-group">
-                                    <label>Nhập hàng của</label>
-                                    <input type="" name="shop-name" class="form-control">
+                                    <label>Tên khách hàng</label>
+                                    <input type="text" name="customer-name" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Số điện thoại</label>
-                                    <input type="" name="shop-phone" class="form-control">
+                                    <input type="text" name="customer-phone" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Địa chỉ nhận hàng</label>
+                                    <input type="text" name="customer-address" class="form-control">
                                 </div>
                                 {{csrf_field()}}
-                                <button type="submit" class="btn btn-primary">Nhập hàng</button>
+                                <button type="submit" class="btn btn-primary">Xuất hàng</button>
                             </div> 
                             @if ( $errors->any() )
                                 <ul>
@@ -136,14 +139,17 @@ $(document).ready(function() {
             alert("Lỗi không tồn tại sản phẩm");
             return false;
         }
+        //var cs = "{{route('admin.addElementProduct',['type' => 'shipment'])}}";
+        //console.log(cs);
         $.ajax({
-            url: "{{route('admin.addElementProduct',['type' => "merchandise"])}}",
+            url: "{{route('admin.addElementProduct',['type' => "shipment"])}}",
             type: 'GET',
             cache: false,
             data: { 'id': id}, 
             datatype: 'html',
             beforeSend: function() {
                 //something before send
+                //console.log(url);
             },
             success: function(data) {
                 if(data.success == true) {

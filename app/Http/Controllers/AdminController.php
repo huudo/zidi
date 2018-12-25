@@ -126,15 +126,26 @@ class AdminController extends Controller
         return redirect()->route('admin.merchandise');
     }
 
-    public function addElementProduct(Request $request){
+    public function addElementProduct(Request $request,$type){
+        //dd($type);
         $id = $request->input('id');
         $product = Product::find($id);
-        $returnHTML = view('admin.elementProduct')->with('product', $product)->render();
+        if($type == 'merchandise'){
+            $returnHTML = view('admin.elementProduct')->with('product', $product)->render();
+        }elseif ($type == 'shipment') {
+            $returnHTML = view('admin.elementShipment')->with('product', $product)->render();
+        }
+        
         return response()->json(array('success' => true, 'html'=>$returnHTML,'product' => $product));
     }
     
     public function getShipment(){
-        return view('admin.shipment');
+        $type = env('ORDER_OUT',2);
+        $orders = Order::where('type',$type)->get();
+        return view('admin.shipment',['orders' => $orders]);
+    }
+    public function getShipmentCreate(){
+        return view('admin.shipmentCreate');
     }
 
 }

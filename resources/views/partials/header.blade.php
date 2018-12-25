@@ -12,7 +12,9 @@
                         <b>Đăng nhập</b></a>&nbsp; or &nbsp;<a class="open-popup" data-rel="2"><b>Đăng ký</b></a>
                     </div>
                     @else
-                    <b>{{Auth::user()->firstname}}</b>
+                    <div class="entry">
+                        <b>{{Auth::user()->name}}</b>
+                    </div>
                     @endif
                     <div class="entry hidden-xs hidden-sm"><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
                     <div class="entry hidden-xs hidden-sm cart">

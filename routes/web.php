@@ -59,6 +59,10 @@ Route::get('/shopping-cart',[
 	'uses' => 'ProductController@shoppingCart',
 	'as' => 'product.shoppingCart'
 ]);
+Route::post('/shopping-cart',[
+	'uses' => 'ProductController@postShoppingCart',
+	'as' => 'product.shoppingCart'
+]);
 Route::get('/reduce-to-cart/{id}',[
 	'uses' => 'ProductController@getReduceToCart',
 	'as' => 'product.reduce'
@@ -67,10 +71,13 @@ Route::get('/plus-to-cart/{id}',[
 	'uses' => 'ProductController@getPlusToCart',
 	'as' => 'product.plusToCart'
 ]);
-Route::get('/checkout',[
-	'uses' => 'ProductController@getCheckout',
-	'as' =>'product.checkout'
+Route::get('/list-orders',[
+	'uses' => 'ProductController@getListOrders',
+	'as' => 'product.listOrders',
+	'middleware' => 'roles',
+	'roles' => ['User','Admin']
 ]);
+
 Route::get('/search/name',[
 	'uses' => 'ProductController@getSearchName',
 	'as' => 'product.searchName'
@@ -86,54 +93,86 @@ Route::get('/search/name',[
 Route::prefix('admin')->group(function () {
 	Route::get('/',[
 		'uses' => 'AdminController@getAdminPage',
-		'as' => 'admin'
+		'as' => 'admin',
+		'middleware' => 'roles',
+		'roles' => ['Admin']
 	]);
 	Route::get('/danh-muc/{id}',[
 		'uses' => 'AdminController@getDanhMuc',
-		'as' => 'admin.danhmuc'
+		'as' => 'admin.danhmuc',
+		'middleware' => 'roles',
+		'roles' => ['Admin']
 	]);
 	Route::post('/danh-muc/{id}/addCategory',[
 		'uses' => 'AdminController@postAddCategory',
-		'as' => 'admin.addCategory'
+		'as' => 'admin.addCategory',
+		'middleware' => 'roles',
+		'roles' => ['Admin']
 	]);
 	Route::get('danh-muc-con/{id}',[
 		'uses' => 'AdminController@getDanhMucCon',
-		'as' => 'admin.subCategory'
+		'as' => 'admin.subCategory',
+		'middleware' => 'roles',
+		'roles' => ['Admin']
 	]);
 	Route::post('product/{id}/addProduct',[
 		'uses' => 'AdminController@postAddProduct',
-		'as' => 'admin.addProduct'
+		'as' => 'admin.addProduct',
+		'middleware' => 'roles',
+		'roles' => ['Admin']
 	]);
 	Route::get('product/{id}/edit',[
 		'uses' => 'AdminController@getEditProduct',
-		'as' => 'admin.editProduct'
+		'as' => 'admin.editProduct',
+		'middleware' => 'roles',
+		'roles' => ['Admin']
 	]);
 	Route::post('product/{id}/edit',[
 		'uses' => 'AdminController@postEditProduct',
-		'as' => 'admin.editProduct'
+		'as' => 'admin.editProduct',
+		'middleware' => 'roles',
+		'roles' => ['Admin']
 	]);
 	Route::get('product/{id}/delete',[
 		'uses' => 'AdminController@getDeleteProduct',
-		'as' => 'admin.deleteProduct'
+		'as' => 'admin.deleteProduct',
+		'middleware' => 'roles',
+		'roles' => ['Admin']
 	]);
 	Route::get('merchandise',[
 		'uses' => 'AdminController@getMerchandise',
-		'as' => 'admin.merchandise'
+		'as' => 'admin.merchandise',
+		'middleware' => 'roles',
+		'roles' => ['Admin']
 	]);
 	Route::get('merchandise/create',[
 		'uses' => 'AdminController@getMerchandiseCreate',
-		'as' => 'admin.merchandiseCreate'
+		'as' => 'admin.merchandiseCreate',
+		'middleware' => 'roles',
+		'roles' => ['Admin']
 	]);
 	Route::post('merchandise/create',[
 		'uses' => 'AdminController@postMerchandiseCreate',
-		'as' => 'admin.merchandiseCreate'
+		'as' => 'admin.merchandiseCreate',
+		'middleware' => 'roles',
+		'roles' => ['Admin']
 	]);
-	Route::get('addElementProduct',[
+	Route::get('addElementProduct/{type}',[
 		'uses' => 'AdminController@addElementProduct',
-		'as' => 'admin.addElementProduct'
+		'as' => 'admin.addElementProduct',
+		'middleware' => 'roles',
+		'roles' => ['Admin']
 	]);
 	Route::get('shipment',[
 		'uses' => 'AdminController@getShipment',
-		'as' => 'admin.shipment'
+		'as' => 'admin.shipment',
+		'middleware' => 'roles',
+		'roles' => ['Admin']
+	]);
+	Route::get('shipment/create',[
+		'uses' => 'AdminController@getShipmentCreate',
+		'as' => 'admin.shipmentCreate',
+		'middleware' => 'roles',
+		'roles' => ['Admin']
 	]);
 });

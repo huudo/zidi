@@ -16,7 +16,7 @@ class CheckRole
     public function handle($request, Closure $next)
     {
         if($request->user() === null){
-            return response("LOGIN DI",401);
+            return redirect()->route('signin');
         }
         $action = $request->route()->getAction();
         $roles = isset($action['roles']) ? $action['roles'] :null;

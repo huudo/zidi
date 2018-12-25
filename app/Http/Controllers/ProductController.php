@@ -13,6 +13,7 @@ use Auth;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Response;
 use Session;
+use App\Http\Requests\CheckCartCheckout;
 class ProductController extends Controller
 {
 	public function getIndex()
@@ -49,7 +50,40 @@ class ProductController extends Controller
     	}
     	$oldCart = Session::get('cart');
     	$cart = new Cart($oldCart);
-    	return view('product.cart',['products' => $cart->items]);
+    	return view('product.cart',['products' => $cart->items,'totalPrice' => $cart->totalPrice]);
+    }
+    function postShoppingCart(CheckCartCheckout $request){
+        $input = $request->all();
+        if(!Auth::check()){
+            return redirect()->route('signin');
+        }
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        $items = $cart->items;
+
+        $order = new Order();
+        $order->total_price = $cart->totalPrice;
+        $order->name = $input['name-customer'];
+        $order->address = $input['address'];
+        $order->phone = $input['phone-number'];
+        $order->status = 'pending';
+        $order->payment = 'handle';
+        $order->type = env('ORDER_OUT',2);
+        Auth::user()->orders()->save($order);
+
+        // Lưu lại chi tiết order để tính nhập xuất hàng cho từng sản phẩm
+        foreach ($items as $key => $item) {
+            //dd($product['price-in']);
+            $order_detail = new DetailOrder();
+            $order_detail->id_product = $item['item']['id'];
+            $order_detail->qty = $item['qty'];
+            $order_detail->price = $item['item']['price'];
+            $order_detail->title = $item['item']['title'];
+            $order_detail->orders()->associate($order);
+            $order_detail->save();
+        }
+        Session::forget('cart');
+        return redirect()->route('main');
     }
     function getPlusToCart($id){
     	$oldCart = Session::has('cart') ? Session::get('cart') : null ;
