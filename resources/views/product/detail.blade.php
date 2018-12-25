@@ -18,14 +18,12 @@
                                         
                                         <div class="product-big-preview-entry swiper-lazy swiper-lazy-loaded" style="background-image: url({{$product->picture}});"></div>
                                    	</div>
-                                   	<!-- <div class="swiper-slide swiper-slide-next" style="width: 409px;">
-                                        <div class="swiper-lazy-preloader"></div>
-                                        <div class="product-big-preview-entry swiper-lazy" data-background="img/product-preview-5.jpg"></div>
-                                   	</div>
-                                   	<div class="swiper-slide" style="width: 409px;">
-                                        <div class="swiper-lazy-preloader"></div>
-                                        <div class="product-big-preview-entry swiper-lazy" data-background="img/product-preview-6.jpg"></div>
-                                   	</div>    -->                               
+                                    @foreach($product->images as $image)
+                                        <div class="swiper-slide swiper-slide-next" style="width: 409px;">
+                                            <div class="swiper-lazy-preloader"></div>
+                                            <div class="product-big-preview-entry swiper-lazy" data-background="{{url('storage/app/'.$image->path_url) }}"></div>
+                                        </div>
+                                    @endforeach                               
                                	</div>
                             </div>
 
@@ -35,21 +33,18 @@
                                <div class="swiper-button-prev hidden swiper-button-prev-swiper-unique-id-4 swiper-button-disabled"></div>
                                <div class="swiper-button-next hidden swiper-button-next-swiper-unique-id-4"></div>
                                <div class="swiper-wrapper" style="transform: translate3d(163.6px, 0px, 0px); transition-duration: 0ms;">
-                                   <div class="swiper-slide swiper-slide-active" style="width: 81.8px;">
+                                    <div class="swiper-slide swiper-slide-active" style="width: 81.8px;">
                                         <div class="product-small-preview-entry">
-                                            <img src="{{$product->picture}}" alt="" style="width: 70px; height: 70px">
+                                            <img src="{{$product->picture}}" alt="" style="width: 70px; height: 70px; object-fit: cover;">
                                         </div>
                                     </div>
-                                    <!-- <div class="swiper-slide swiper-slide-next" style="width: 81.8px;">
-                                        <div class="product-small-preview-entry">
-                                            <img src="img/product-preview-5_.jpg" alt="">
+                                    @foreach($product->images as $image)
+                                        <div class="swiper-slide swiper-slide-next" style="width: 81.8px;">
+                                            <div class="product-small-preview-entry">
+                                                <img src="{{url('storage/app/'.$image->path_url) }}" alt="" style="width: 70px; height: 70px;object-fit: cover;">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="swiper-slide" style="width: 81.8px;">
-                                        <div class="product-small-preview-entry">
-                                            <img src="img/product-preview-6_.jpg" alt="">
-                                        </div>
-                                    </div>         -->         
+                                    @endforeach                   
                                </div>
                             </div>
                         </div>

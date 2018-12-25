@@ -25,4 +25,7 @@ class Product extends Model
     function orderDetail(){
     	return $this->belongsTo('App\DetailOrder','id_product');
     }
+    function images(){
+    	return $this->hasMany('App\ProductImage','id_product');
+    }
 }

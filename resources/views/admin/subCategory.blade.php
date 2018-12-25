@@ -18,6 +18,15 @@
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addProduct" style="float: right;">
 					 Thêm sản phẩm
 				</button>
+                <div class="form-group has-error">
+                    @if ( $errors->any() )
+                        <h3 class="text-danger">Đăng sản phẩm không thành công</h3>
+                        @foreach ($errors->all() as $error)
+                            <span class="text-danger">{{ $error }}</span>
+                        @endforeach   
+                    @endif  
+                </div>
+                  
             </div>
         </div>
     </div>
@@ -53,7 +62,7 @@
 			  <span aria-hidden="true">&times;</span>
 			</button>
 		</div>
-       	<form action="{{route('admin.addProduct',['id'=>$sub->id])}}" method="POST">
+       	<form action="{{route('admin.addProduct',['id'=>$sub->id])}}" method="POST" enctype="multipart/form-data">
 	      	<div class="modal-body">
 	       
 	        	<div class="form-group">
@@ -61,9 +70,13 @@
 				    <input type="text" name ="title" class="form-control">
 				</div>
 				<div class="form-group">
-				    <label>Giá sản phẩm</label>
-				    <input type="text" name ="price" class="form-control">
+				    <label>Giá nhập</label>
+				    <input type="text" name ="price-in" class="form-control">
 				</div>
+                <div class="form-group">
+                    <label>Giá bán</label>
+                    <input type="text" name ="price" class="form-control">
+                </div>
 				<div class="form-group">
 				    <label>Mô tả</label>
 				    <textarea name="description" id="description-editor">
@@ -71,13 +84,15 @@
                     </textarea>
 				</div>
 				<div class="form-group">
-				    <label>Ảnh đại diện</label>
+				    <label>Ảnh sản phẩm</label>
+                    <input type="file" class="form-control" name="photos[]" multiple />
 				</div>
 	      	</div>
 	      	<div class="modal-footer">
 	      		{{csrf_field()}}
 		        <button type="submit" class="btn btn-primary">Tạo mới</button>
 	      	</div>
+
       	</form>
     </div>
   </div>

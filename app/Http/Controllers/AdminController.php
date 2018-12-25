@@ -6,10 +6,12 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\SubCategory;
 use App\Product;
+use App\ProductImage;
 use App\Order;
 use App\DetailOrder;
 use Auth;
 use App\Http\Requests\CheckMerchandiseRequest;
+use App\Http\Requests\CheckCreateProduct;
 class AdminController extends Controller
 {
 	public function __construct()
@@ -47,16 +49,26 @@ class AdminController extends Controller
     	return view('admin.subCategory',['sub'=>$sub,'products' => $products]);
     }
 
-    public function postAddProduct(Request $request, $id){
+    public function postAddProduct(CheckCreateProduct $request, $id){
+        $input = $request->all();
+
     	$sub = SubCategory::find($id);
     	$product = new Product();
-    	$product->title = $request->title;
-    	$product->description = $request->description;
+    	$product->title = $input['title'];
+    	$product->description = $input['description'];
     	$product->picture = 'https://img.deusm.com/informationweek/2014/09/1316005/apple_watch.png';
-    	$product->price = $request->price;
-
+    	$product->price = $input['price'];
+        $product->price_in = $input['price-in'];
     	$product->sub_categories()->associate($sub);
     	$product->save();
+
+        foreach ($request->photos as $photo) {
+            $file_name = $photo->store('images');
+            $image = new ProductImage();
+            $image->path_url = $file_name;
+            $product->images()->save($image);
+        }
+        
     	return redirect()->route('admin.subCategory',['id'=>$id]);
     }
 
