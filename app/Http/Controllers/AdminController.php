@@ -12,6 +12,7 @@ use App\DetailOrder;
 use Auth;
 use App\Http\Requests\CheckMerchandiseRequest;
 use App\Http\Requests\CheckCreateProduct;
+use App\Http\Requests\CheckCreateShipment;
 class AdminController extends Controller
 {
 	public function __construct()
@@ -159,6 +160,41 @@ class AdminController extends Controller
     }
     public function getShipmentCreate(){
         return view('admin.shipmentCreate');
+    }
+    public function postShipmentCreate(CheckCreateShipment $request){
+        $input = $request->all();
+        $products = $input['product']; 
+        $customer_name = $input['customer-name'];
+        $customer_phone = $input['customer-phone'];
+        $customer_address = $input['customer-address'];
+        $total_price = $input['total-price'];
+        $total_profit = $input['total-profit'];
+
+        // Lư order mới
+        $order = new Order();
+        $order->total_price = $total_price;
+        $order->total_profit = $total_profit;
+
+        $order->name = $customer_name;
+        $order->phone = $customer_phone;
+        $order->address = $customer_address;
+        $order->status = 'requesting';
+        $order->payment = 'pending';
+        $order->type = env('ORDER_OUT',2);
+        Auth::user()->orders()->save($order);
+
+        // Lưu chi tiết Order
+        foreach ($products as $key => $product) {
+            //dd($product['price-in']);
+            $order_detail = new DetailOrder();
+            $order_detail->id_product = $key;
+            $order_detail->qty = $product['pty'];
+            $order_detail->price = $product['price'];
+            $order_detail->title = $product['title'];
+            $order_detail->orders()->associate($order);
+            $order_detail->save();
+        }
+        return redirect()->route('admin.shipment');
     }
 
 }

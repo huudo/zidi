@@ -175,4 +175,10 @@ Route::prefix('admin')->group(function () {
 		'middleware' => 'roles',
 		'roles' => ['Admin']
 	]);
+	Route::post('shipment/create',[
+		'uses' => 'AdminController@postShipmentCreate',
+		'as' => 'admin.shipmentCreate',
+		'middleware' => 'roles',
+		'roles' => ['Admin']
+	]);
 });
