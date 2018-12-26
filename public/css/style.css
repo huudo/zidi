@@ -642,12 +642,12 @@ footer .follow{display: inline-block; vertical-align: bottom;}
 .categories-menu li:after{display: block; content: ""; clear: both;}
 .categories-menu li a{font-size: 11px; line-height: 16px; padding: 15px 46px 15px 20px; font-weight: 700; color: #888; text-transform: uppercase; font-family: 'Open Sans', sans-serif; border-bottom: 1px #f7f7f7 solid; background: #fff; display: block; float: left;width: 100%; transition: all .15s; -webkit-transition: all .15s; backface-visibility: hidden; -webkit-backface-visibility: hidden;}
 .categories-menu li ul a{color: rgba(255,255,255,.5); background: #343434; border-color: #3f3f3f;}
-.categories-menu .toggle{width: 46px; height: 46px; float: left; margin-left: -46px; cursor: pointer; background: url('') center center no-repeat; position: relative;}
+.categories-menu .toggle{width: 46px; height: 46px; float: left; margin-left: -46px; cursor: pointer; background: url('../images/icon-12.png') center center no-repeat; position: relative;}
 .categories-menu li a:hover, .categories-menu li ul a:hover{color: #fff; background: #ff5722; border-color: rgba(255,255,255,.5);}
 .categories-menu li a:hover+.toggle, .categories-menu li ul a:hover+.toggle{background-image: url('');}
 .categories-menu.transparent>li>a{background: transparent; padding-left: 0;}
 .categories-menu.transparent>li>a+.toggle{background-position: right 10px center;}
-.categories-menu.transparent>li>a:hover+.toggle{background-image: url('');}
+.categories-menu.transparent>li>a:hover+.toggle{background-image: url('../images/icon-18.png');}
 .categories-menu.transparent>li>a:hover{color: #ff5722;}
 .categories-menu.transparent>li>a{border-color: #efefef;}
 @media (min-width: 992px) {
@@ -760,7 +760,7 @@ span.pagination{border: none;}
 }
 /**/
 .main-product-slider-wrapper{max-width: 570px; margin: 0 auto;}
-.product-big-preview-entry{padding-bottom: 100%; background-size: contain; background-position: center center; background-repeat: no-repeat;}
+.product-big-preview-entry{padding-bottom: 100%; background-size: cover; background-position: center center; background-repeat: no-repeat;}
 .product-small-preview-entry{max-width: 70px; margin: 0 auto; opacity: .2; transition: all .15s; -webkit-transition: all .15s;}
 .product-small-preview-entry img{display: block;}
 .swiper-slide-active .product-small-preview-entry{opacity: 1;}

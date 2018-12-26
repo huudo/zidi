@@ -30,7 +30,8 @@ class ProductController extends Controller
     }
     function getDetailProduct($id){
         $product = Product::findBySlug($id);
-        return view('product.detail',['product' => $product]);
+        $categories = Category::with('subcategories')->get();
+        return view('product.detail',['product' => $product,'categories' => $categories]);
     }
     function getAddToCart(Request $request, $id){
         //$id = intval($id);
@@ -63,6 +64,7 @@ class ProductController extends Controller
 
         $order = new Order();
         $order->total_price = $cart->totalPrice;
+        $order->total_profit = $cart->totalProfit;
         $order->name = $input['name-customer'];
         $order->address = $input['address'];
         $order->phone = $input['phone-number'];

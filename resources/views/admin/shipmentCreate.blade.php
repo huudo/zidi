@@ -26,6 +26,8 @@
                         <p style="float: right;padding-right: 20px;">
                             <label><i class="fa fa-dollar-sign"></i> Tổng tiền: </label>
                             <input class="total-price" type="text" name="total-price"  value="0">
+                            <label><i class="fa fa-dollar-sign"></i> Lợi nhuận: </label>
+                            <input class="total-profit" type="text" name="total-profit"  value="0">
                         </p>
                     </div>
                     <table class="list-product" style="width: 100%">
@@ -88,8 +90,9 @@
 <script type="text/javascript">
     // Các biến để tính tổng tiền nhập
     var total = 0;
-    function Product(id,price,pty){
+    function Product(id,price_in,price,pty){
         this.id = id;
+        this.price_in = price_in;
         this.price = price;
         this.pty = pty;
     }
@@ -161,7 +164,7 @@ $(document).ready(function() {
                         $('.product-pty-'+id).val(count);
                     }else{
                         $('.list-product').append(data.html);
-                        var pro = new Product(id,data.product['price_in'],1);
+                        var pro = new Product(id,data.product['price_in'],data.product['price'],1);
                         listProduct[id] = pro;
                     }
                     calculatePrice();
@@ -174,12 +177,15 @@ $(document).ready(function() {
 	}
     function calculatePrice(){
         var new_total = 0;
+        var profit = 0;
         listProduct.forEach(function(element) {
             new_total += element['pty']*element['price'];
+            profit += element['pty']*(element['price'] - element['price_in']);
         });
         total = new_total;
         $('.total-price').val(total);
-        //console.log("TOTAL: ",total);
+        $('.total-profit').val(profit);
+        //console.log("profit: ",profit);
     }
 </script>
 @endsection

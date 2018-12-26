@@ -43,9 +43,13 @@
                 <div class="img-product">
                     <img src="{{$product->picture}}">
                 </div>
+                <div class="group-price">
+                    <p>Giá nhập: {{number_format($product->price_in)}}</p>
+                    <p>Giá bán: {{number_format($product->price)}}</p>
+                </div>
                 <div class="description-product">
                     <h4>Mô tả</h4>
-                    <p>{{$product->description}}</p>
+                    <p>{{$product->sort_description}}</p>
                 </div>
     		</div>
     	</div>

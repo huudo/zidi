@@ -353,8 +353,9 @@ $(function() {
 	$('.checkbox-toggle-title input').on('change', function(){
 		$('.checkbox-toggle-wrapper').slideToggle();
 	});
-	var text;
+
 });
+
 $(".add-to-card").on('click', function(e) {
     // prevent the default action, in this case the following of a link
     

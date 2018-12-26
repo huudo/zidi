@@ -17,6 +17,7 @@ class CreateOrdersTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->integer('total_price');
+            $table->integer('total_profit')->nullable();
             $table->string('status');
             $table->string('payment');
             $table->string('name')->nullable();

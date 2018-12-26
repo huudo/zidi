@@ -124,7 +124,7 @@
                                         </div>
                                         <div class="description">
                                             <div class="simple-article text size-2">
-                                                <?php echo strip_tags($product->description) ;?>
+                                                {{$product->sort_description}}
                                             </div>
                                             <div class="icons">
                                                 <a class="entry"><i class="fa fa-check" aria-hidden="true"></i></a>

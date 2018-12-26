@@ -56,6 +56,7 @@ class AdminController extends Controller
     	$product = new Product();
     	$product->title = $input['title'];
     	$product->description = $input['description'];
+        $product->sort_description = substr(strip_tags($input['description']),0,350);
     	$product->picture = 'https://img.deusm.com/informationweek/2014/09/1316005/apple_watch.png';
     	$product->price = $input['price'];
         $product->price_in = $input['price-in'];

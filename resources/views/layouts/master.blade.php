@@ -33,5 +33,8 @@
 <script src="{{ asset('public/js/jquery.classycountdown.js')}}"></script>
 <script src="{{ asset('public/js/jquery.knob.js')}}"></script>
 <script src="{{ asset('public/js/jquery.throttle.js')}}"></script>
+<script src="{{ asset('public/js/jquery-ui.min.js')}}"></script>
+<script src="{{ asset('public/js/jquery.ui.touch-punch.min.js')}}"></script>
+
 </body>
 </html>
