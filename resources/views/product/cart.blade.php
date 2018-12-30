@@ -1,6 +1,8 @@
 
 @extends('layouts.master')
-
+@section('title')
+    Thông tin giỏ hàng
+@endsection
 @section('content')
 <div class="header-empty-space"></div>
 

@@ -68,8 +68,8 @@ class ProductController extends Controller
         $order->name = $input['name-customer'];
         $order->address = $input['address'];
         $order->phone = $input['phone-number'];
-        $order->status = 'pending';
-        $order->payment = 'handle';
+        $order->status = 'requesting';
+        $order->payment = 'no';
         $order->type = env('ORDER_OUT',2);
         Auth::user()->orders()->save($order);
 
@@ -101,33 +101,11 @@ class ProductController extends Controller
     	Session::put('cart',$cart);
     	return redirect()->route('product.shoppingCart');
     }
-    function getCheckout(){
-        // $oldCart = Session::get('cart');
-        // $cart = new Cart($oldCart);
-        // $items = $cart->items;
-        
-        // $order = new Order();
-        // $order->total_price = $cart->totalPrice;
-        // $order->name = $shop_name;
-        // $order->phone = $shop_phone;
-        // $order->status = 'pending';
-        // $order->payment = 'handle';
-        // Auth::user()->orders()->save($order);
-
-        // // Lưu lại chi tiết order để tính nhập xuất hàng cho từng sản phẩm
-        // foreach ($items as $key => $item) {
-        //     $detailOrder = new DetailOrder();
-        //     $detailOrder->qty = $item['qty'];
-        //     $detailOrder->price = $item['price'];
-        //     $product = $item['item'];
-        //     $detailOrder->title = $product['title'];
-        //     $detailOrder->orders()->associate($order);
-        //     $detailOrder->product()->associate($product);
-        //     $detailOrder->save();               
-        // }
-        
-        // Session::forget('cart');
-        // return redirect()->route('main');
+    function getListOrders(Request $request){
+        $user_id = Auth::user()->id;
+        $status = isset($request->status) ? $request->status : 'requesting';
+        $orders = Order::where('status',$status)->get();
+        return view('product.list-order',['status' => $status,'orders'=>$orders]);
     }
     function getSearchName(Request $request){
         $products = Product::where('title', 'like', '%' . $request->value . '%')->get();

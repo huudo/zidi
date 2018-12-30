@@ -155,7 +155,7 @@ class AdminController extends Controller
     
     public function getShipment(){
         $type = env('ORDER_OUT',2);
-        $orders = Order::where('type',$type)->get();
+        $orders = Order::where('type',$type)->orderBy('created_at', 'DESC')->Paginate(12);
         return view('admin.shipment',['orders' => $orders]);
     }
     public function getShipmentCreate(){
@@ -178,8 +178,8 @@ class AdminController extends Controller
         $order->name = $customer_name;
         $order->phone = $customer_phone;
         $order->address = $customer_address;
-        $order->status = 'requesting';
-        $order->payment = 'pending';
+        $order->status = 'verified';
+        $order->payment = 'no';
         $order->type = env('ORDER_OUT',2);
         Auth::user()->orders()->save($order);
 
@@ -195,6 +195,16 @@ class AdminController extends Controller
             $order_detail->save();
         }
         return redirect()->route('admin.shipment');
+    }
+    public function getShipmentAction($order_id, $action){
+        $order = Order::find($order_id);
+        if($action == 'payment'){
+            $order->payment = 'yes';
+        }else{
+            $order->status = $action;
+        }        
+        $order->save();
+        return redirect()->back();
     }
 
 }

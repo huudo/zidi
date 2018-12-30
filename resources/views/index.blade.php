@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('title')
+    Hàng Hàn Quốc nhập khẩu
+@endsection
 @section('content')
     <div class="header-empty-space"></div>
     <div class="slider-wrapper">

@@ -1,5 +1,7 @@
 @extends('layouts.master')
-
+@section('title')
+    {{$product->description}}
+@endsection
 @section('content')
     <div class="grey-background">
         <div class="header-empty-space"></div>

@@ -181,4 +181,10 @@ Route::prefix('admin')->group(function () {
 		'middleware' => 'roles',
 		'roles' => ['Admin']
 	]);
+	Route::get('shipment/{order_id}/{action}',[
+		'uses' => 'AdminController@getShipmentAction',
+		'as' => 'admin.shipmentAction',
+		'middleware' => 'roles',
+		'roles' => ['Admin']
+	]);
 });

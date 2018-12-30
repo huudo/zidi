@@ -3,7 +3,7 @@
         <div class="content-margins">
             <div class="row">
                 <div class="col-md-5 hidden-xs hidden-sm">
-                    <div class="entry"><b>contact us:</b> <a href="tel:0904075992">0904 075 992</a></div>
+                    <div class="entry"><b>Liên hệ:</b> <a href="tel:0904075992">0904 075 992</a></div>
                     <div class="entry"><b>email:</b> <a href="mailto:huudt.dev@gmail.com">huudt.dev@gmail.com</a></div>
                 </div>
                 <div class="col-md-7 col-md-text-right">
@@ -48,13 +48,13 @@
                         <nav>
                             <ul>
                                 <li class="active">
-                                    <a href="{{route('main')}}">Home</a>
+                                    <a href="{{route('main')}}">Trang chủ</a>
                                 </li>
                                 <li>
-                                    <a href="#">about us</a>
+                                    <a href="#">Giới thiệu</a>
                                 </li>
                                 <li class="megamenu-wrapper">
-                                    <a href="#">products</a>
+                                    <a href="#">Sản phẩm</a>
                                     <div class="menu-toggle"></div>
                                     <div class="megamenu">
                                         <div class="links">

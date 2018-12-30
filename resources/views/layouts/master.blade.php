@@ -6,7 +6,7 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
-    <title>Laravel ACL</title>
+    <title>@yield('title')</title>
     <link href="https://fonts.googleapis.com/css?family=Questrial|Raleway:700,900" rel="stylesheet">
 
     <link href="{{ asset('public/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
